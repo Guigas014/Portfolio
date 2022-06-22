@@ -23,6 +23,8 @@ module.exports = {
     //const { link } = req.params
 
     const  dataMovie  = await search.searchMovie(link) 
+  
+    console.log(dataMovie)
 
     return res.json(dataMovie)
   }

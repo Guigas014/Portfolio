@@ -4,9 +4,12 @@ const puppeteer = require('puppeteer')
 module.exports = {
     
      async listSearch(movieName) {
-        const browser = await puppeteer.launch()
-        const page = await browser.newPage()
-        await page.goto(`https://www.imdb.com/find?q=${movieName}`)
+        try {
+          //const browser = await puppeteer.launch({ headless: false })
+          const browser = await puppeteer.launch()
+          const page = await browser.newPage()
+          await page.goto(`https://www.imdb.com/find?q=${movieName}`)
+
     
 
         // Validar a página buscando o valor 'Title'
@@ -72,10 +75,14 @@ module.exports = {
         console.log('Fechou01!')
         await browser.close()
         
-        //console.log(movieList)
+        console.log(movieList)
         
          return movieList 
+
+        } catch (e) {
+          console.log(e)
         }
+    }
 }
 
 

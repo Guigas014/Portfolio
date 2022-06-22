@@ -157,9 +157,9 @@ function renderMovie(data) {
   
   //Data movie
   const labels = {
-    'Título Original': data.originalTitle, 
+    Lançamento: data.launch, 
     Duração: data.time, 
-    Gênero: data.genres, 
+    Gênero: String(data.genres).replace(/,/g, " / "), 
     IMDB: data.rate
   }
 
@@ -211,16 +211,22 @@ function renderMovie(data) {
     }  
   })
 
-  certification.appendChild(ageImg)
+  //certification.appendChild(ageImg)
 
   //Text
   const ageText = document.createElement('p')
-  if (data.certificate != 'Livre') {
-    ageText.appendChild(document.createTextNode(`Inadequado para menores de ${data.certificate} anos`))
+  if (data.certificate === 'Livre') {
+    ageText.appendChild(document.createTextNode('Livre para todos os públicos'))
+    certification.appendChild(ageImg)
+  }
+  else if (data.certificate === '10' || '12' || '14' || '16' || '18') {
+      ageText.appendChild(document.createTextNode(`Inadequado para menores de ${data.certificate} anos`))
+    certification.appendChild(ageImg)
   }
   else {
-    ageText.appendChild(document.createTextNode('Livre para todos os públicos'))
+    ageText.appendChild(document.createTextNode('Classificação indicativa indisponível'))
   }
+  
 
   certification.appendChild(ageText)
   
