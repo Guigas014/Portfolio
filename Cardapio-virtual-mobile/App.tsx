@@ -20,14 +20,12 @@
 //});
 
 import React from "react";
-import { NativeBaseProvider, Box, Text } from "native-base";
-
+import { NativeBaseProvider, Box } from "native-base";
+ 
 export default function App() {
   return (
     <NativeBaseProvider>
-      <Box flex={1} bg="black" alignItems="center" justifyContent="center">
-        <Text color="#477788" fontSize={20} fontWeight="bold">Hello world</Text>
-      </Box>
+      <Box>Hello world</Box>
     </NativeBaseProvider>
   );
 }
