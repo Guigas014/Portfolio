@@ -19,13 +19,18 @@
   //},
 //});
 
-import React from "react";
+import React, { useEffect } from "react";
 import { NativeBaseProvider, Box } from "native-base";
 
+import {   } from './src/Teste';
+
+
 export default function App() {
+ 
+
   return (
     <NativeBaseProvider>
-      <Box>Hello world</Box>
+      <Box>Hello world</Box> 
     </NativeBaseProvider>
   );
 }

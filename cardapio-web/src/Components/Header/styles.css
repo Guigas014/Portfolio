@@ -1,0 +1,24 @@
+.header-container {
+	height: 4rem;
+	padding: 1rem;
+	background-color: #ea580c;
+	color: ghostwhite;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.header-title {
+	font-size: 30px;
+	font-weight: 700;
+	
+}
+
+.header-searchButton {
+	cursor: pointer;
+}
+
+.header-searchButton:hover {
+	opacity: 60%;
+}

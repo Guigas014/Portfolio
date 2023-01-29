@@ -1,0 +1,45 @@
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  /*background-color: lightblue;*/
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+
+  text-align: center;
+}
+
+label {
+  font-size: 18px;
+  text-transform: uppercase;
+  padding-top: 3rem;
+}
+
+.menu-section {
+  width: 100%;
+  margin-top: 1rem;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+
+  /*border: solid black 1px;*/
+}
+
+.menu-card {
+  width: 145px;
+  height: 12rem;
+
+  display: flex;
+  justify-content: center;
+
+  background-color: lightblue;
+  border-radius: 0.5rem;  
+	box-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+}
+

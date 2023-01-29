@@ -1,0 +1,33 @@
+.menu-list-container {
+	background-color: #C0C0C0;
+
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+  	overflow-y: hidden;
+    overflow-x: hidden;
+  	scroll-behavior: smooth;
+}
+
+.menu-list-item {
+	font-size: 14px;
+	font-weight: 400;
+	text-align: center;
+
+	height: 3.5rem;
+	padding: 0.6rem;
+	border-bottom: solid transparent 3px;
+	border-radius: 3px;
+}
+
+.menu-list-item:hover {
+	border-bottom: solid 3px #ea580c;
+	color: #ea580c;
+	
+}
+
+/*@media(max-width: 540px) {*/
+	/*.menu-container {*/
+		/*flex-direction: column;*/
+	/*}*/
+/*}*/
