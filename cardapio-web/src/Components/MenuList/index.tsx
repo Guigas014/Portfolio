@@ -9,14 +9,14 @@ export function MenuList() {
 	 return ( 
 	 	<nav className="menu-list-container">
 			<a href="" className="menu-list-item">
-				Hamburguers artesanais
+				Hamburguers artesanais 
 			</a>
 
 			<a href="#HAMBURGUER-CARNE" className="menu-list-item">
 				Hamburguers de carne
 			</a>
 
-			<a href="#HAMBURGUER-FRANGO" className="menu-list-item">
+			<a href="#HAMBURGUER-FRANGO"className="menu-list-item">
 				Hamburguers de frango
 			</a>
 
