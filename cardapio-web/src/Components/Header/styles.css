@@ -18,24 +18,29 @@
 
 .header-form {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
+
+  width: 15rem;
+
+}
+
+.header-input {
+  /*display: none;*/
+  position: relative;
+  width: 100%;
+  height: 2.2rem;
+  padding: 0.5rem;
+
+  font-size: 14px;
+  color: dimgray;
+  /*color: #FF4500;*/
 
   background-color: lightgray;
   border: none;
   border-radius: 0.6rem;
 	box-shadow: 1px 1px rgba(0, 0, 0, 0.2);
-}
-
-.header-input {
-  /*display: none;*/
-  width: 100%;
-  height: 2.2rem;
-  padding: 0.5rem;
-
-  background-color: transparent ;
-  border: none;
-  /*outline: none;*/
+ /*outline: none;*/
 }
 
 .header-input:focus {
@@ -46,11 +51,9 @@
 }
 
 .header-searchButton {
+  position: absolute;
   height: 2.2rem;
   width: 40px;
-  right: 1rem;
-  background-color: transparent;
-  border: none;
 
   background-color: lightgray;
   border: none;
@@ -64,4 +67,10 @@
 
 .header-searchButton:hover {
 	opacity: 60%;
+}
+
+@media(max-width: 540px) {
+  .header-form {
+    width: 11rem;
+  }
 }

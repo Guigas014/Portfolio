@@ -11,6 +11,8 @@
  html, body {               
      background-color: #E5E5E5;
      color: #000;
+
+     scroll-behavior: smooth;
  }
  
  a, a:hover {

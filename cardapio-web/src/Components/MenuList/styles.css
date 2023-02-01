@@ -3,15 +3,18 @@
 
 	display: flex;
 	align-items: center;
-	gap: 2rem;
+  gap: 2rem;
+
   overflow-y: hidden;
-  overflow-x: scroll;
+  overflow-x: hidden;
   scroll-behavior: smooth;
+
 }
 
 .menu-list-item {
-	font-size: 14px;
+	font-size: 16px;
 	font-weight: 400;
+  align-items: center;
 	text-align: center;
 
 	height: 3.5rem;
@@ -26,8 +29,8 @@
 	
 }
 
-/*@media(max-width: 540px) {*/
-	/*.menu-container {*/
-		/*flex-direction: column;*/
-	/*}*/
-/*}*/
+@media(max-width: 900px) {
+  .menu-list-container {
+    overflow-x: auto;
+  }
+}

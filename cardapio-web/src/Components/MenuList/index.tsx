@@ -1,4 +1,4 @@
-import React from 'react'; 
+import { DragEvent, MouseEvent } from 'react'; 
 
 import './styles.css'; 
  
@@ -6,8 +6,16 @@ import './styles.css';
 
 export function MenuList() { 
 
+  //Pega o movimento de scroll, usando o cursor.
+  function handleScrollList(event: MouseEvent) {
+
+    event.currentTarget.scroll(event.pageX, 0)
+    //console.log(event.pageX)
+  }
+
+
 	 return ( 
-	 	<nav className="menu-list-container">
+	 	<nav onMouseOver={handleScrollList} className="menu-list-container">
 			<a href="" className="menu-list-item">
 				Hamburguers artesanais 
 			</a>
