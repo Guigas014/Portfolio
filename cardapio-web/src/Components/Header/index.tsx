@@ -6,9 +6,12 @@ import './styles.css';
 
 export function Header() { 
   const [search, setSearch] = useState<string>('');
+  const [searchOpen, setSearchOpen] = useState<boolean>(false);
+ 
   
-  //console.log(search) 
-
+  function handleOpenSearch() {
+    setSearchOpen(!searchOpen) 
+  }
 
   function handleKeyboard(event: KeyboardEvent) {
     if (event.key === "Enter") {
@@ -28,11 +31,16 @@ export function Header() {
         type="text" 
         className="header-input" 
         placeholder="Pesquisar produto"
-        onChange={event => setSearch(event.target.value)}
         value={search}
+        onChange={ event => setSearch(event.target.value) }
+        style={ searchOpen === true ? {display: "flex"} : {display: "none"} }
       />
-      <button className="header-searchButton">
-				<MagnifyingGlass  size={26} />
+      <button onClick={handleOpenSearch} className="header-searchButton">
+        {searchOpen === true 
+          ? <XCircle  size={26} /> 
+          : <MagnifyingGlass  size={26} />
+        }
+				
       </button>
     </form>
 
