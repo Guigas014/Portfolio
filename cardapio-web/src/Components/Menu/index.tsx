@@ -1,14 +1,34 @@
+import { useState } from 'react';
+import { ItemModal } from '../ItemModal';
+
 import './styles.css'; 
  
 
 
 export function Menu() { 
+  const [toggleModal, setToggleModal] = useState(false);
+  
 
   function handleOpenModal() {
+    if (toggleModal === false) {
+      setToggleModal(true);    
+    } 
+    else {
+      setToggleModal(false);    
+    }
+
     console.log("Modal")
   }
 
+
 	 return ( 
+    <>
+    {
+      toggleModal === true ?
+        <ItemModal closeModal={handleOpenModal} />
+     :
+       null  
+    }
 
 		<div className="menu-container">
 			
@@ -89,7 +109,7 @@ export function Menu() {
 			</div>
 
 		</div>
-
+   </>
 	 ); 
 
 }

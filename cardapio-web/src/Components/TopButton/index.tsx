@@ -5,7 +5,7 @@ import './styles.css';
 
 
 
-export function TopButton(event: WheelEvent) { 
+export function TopButton() { 
   const [screenMove, setScreenMove] = useState(0)
 
 

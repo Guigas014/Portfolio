@@ -6,12 +6,14 @@
     width: full;
     margin: 0;
     padding: 0;
+
  }
  
  html, body {               
      background-color: #E5E5E5;
      color: #000;
 
+     overflow-y: auto;
      scroll-behavior: smooth;
  }
  
