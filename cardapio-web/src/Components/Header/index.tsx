@@ -1,4 +1,4 @@
-import { KeyboardEvent, useState } from 'react'
+import { FormEvent, useState } from 'react'
 import { MagnifyingGlass, XCircle } from 'phosphor-react'
 
 import './styles.css'; 
@@ -13,20 +13,18 @@ export function Header() {
     setSearchOpen(!searchOpen) 
   }
 
-  function handleKeyboard(event: KeyboardEvent) {
-    if (event.key === "Enter") {
-      console.log(`O texto digitado é: ${search}`)
-      setSearch('')
-    }
-
-    //console.log(event.key)
+  function handleKeyboard(event: FormEvent) {
+    event.preventDefault() 
+  
+    console.log(search)
+    setSearch('')
   }
 
 	 return ( 
-		<div className="header-container" id="TOP">
+		<div className="header-container">
 			<div className="header-title">X Burguer</div>
 
-    <form action="" className="header-form" onKeyPress={handleKeyboard}>
+    <form action="" className="header-form" onSubmit={handleKeyboard}>
       <input 
         type="text" 
         className="header-input" 
@@ -35,14 +33,15 @@ export function Header() {
         onChange={ event => setSearch(event.target.value) }
         style={ searchOpen === true ? {display: "flex"} : {display: "none"} }
       />
-      <button onClick={handleOpenSearch} className="header-searchButton">
-        {searchOpen === true 
-          ? <XCircle  size={26} color={"red"} /> 
-          : <MagnifyingGlass  size={26} />
-        }
-				
-      </button>
+
     </form>
+
+    <button onClick={handleOpenSearch} className="header-searchButton">
+      {searchOpen === true 
+        ? <XCircle  size={26} color={"red"} /> 
+        : <MagnifyingGlass  size={26} />
+      }
+    </button>
 
 		</div> 
 	 ); 

@@ -13,21 +13,20 @@ export function TopButton() {
     setScreenMove(document.scrollingElement!.scrollTop)
   });
 
-
-  //useEffect(() => {
-    //setScreenMove(document.scrollingElement!.scrollTop)
-  //}, []);
+  function handleTop() {
+    document.scrollingElement!.scroll(0, 0);
+  }
     
 
 
   return ( 
-        <a 
-          href="#TOP"
+        <button 
           className="top-button"
           style={screenMove > 60 ? {display: "flex"} : {display: "none"}}
+          onClick={handleTop}
         >
           <CaretDoubleUp size={32} /> 
-        </a>
+        </button>
   ); 
 
 }

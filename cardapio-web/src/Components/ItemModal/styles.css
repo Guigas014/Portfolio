@@ -8,12 +8,39 @@
   height: 100%;
   inset: 0;
   z-index: 1;
-  overflow-y: scroll;
+  /*overflow-y: scroll;*/
 
   background-color: rgba(0, 0, 0, 0.6);
 }
 
+.modal-close-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: fixed;
+  right: 25%;
+  top: 10%;
+  width: 40px;
+  height: 40px;
+
+  background-color: darkgray;
+  border: none;
+  border-radius: 0 0.5rem 0 0.5rem;
+
+  outline: none;
+  transition: 0.4s;
+}
+
+.modal-close-button:hover {
+  background: rgba(255, 0, 0, 0.4);
+}
+
 .modal-card {
+  width: 50%;
+  height: 80%;
+  padding: 0.5rem;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,13 +52,45 @@
   color: dimgray;
 }
 
-.modal-close-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.modal-card-image {
+  width: 100%;
+  height: 50%;
+  margin-bottom: 0.5rem;
+
+  border-radius: 0.2rem;
 }
 
-.modal-close-button:hover {
-  background: rgba(255, 0, 0, 0.4);
+.modal-card-title {
+  height: 5%;
+  margin-bottom: 0.5rem;
+
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.modal-card-description {
+  height: 30%;
+  width: 95%;
+  margin-bottom: 0.5rem;
+
+  font-size: 14px;
+}
+
+.modal-card-footer {
+  height: 10%;
+  width: 95%;
+  margin-bottom: 0.2rem;
+
+  display: flex;
+  gap: 3rem;
+
+  list-style: none;
+}
+
+.modal-card-footer-option {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 

@@ -1,10 +1,14 @@
 .menu-list-container {
-	background-color: lightgray;
+  width: 100%;
 
 	display: flex;
 	align-items: center;
   gap: 2rem;
 
+  position: fixed;
+  top: 3.2rem;
+
+	background-color: lightgray;
   overflow-y: hidden;
   overflow-x: hidden;
   scroll-behavior: smooth;
@@ -12,13 +16,13 @@
 }
 
 .menu-list-item {
-	font-size: 16px;
+	font-size: 14px;
 	font-weight: 400;
   align-items: center;
 	text-align: center;
 
-	height: 3.5rem;
-	padding: 0.6rem;
+	height: 3.2rem;
+  padding: 0.5rem;
 	border-bottom: solid transparent 3px;
 	border-radius: 3px;
 }

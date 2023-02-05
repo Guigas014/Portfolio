@@ -2,12 +2,11 @@ import { useState } from 'react';
 import { ItemModal } from '../ItemModal';
 
 import './styles.css'; 
- 
 
 
 export function Menu() { 
   const [toggleModal, setToggleModal] = useState(false);
-  
+
 
   function handleOpenModal() {
     if (toggleModal === false) {
@@ -30,9 +29,17 @@ export function Menu() {
        null  
     }
 
-		<div className="menu-container">
+		<div 
+      className="menu-container" 
+      //style={toggleModal === true ? {position: "fixed"} : {position: "unset"}}
+    >
 			
-			<label id="HAMBURGUER-CARNE">Hamburguers carne</label>
+			<div 
+        id="HAMBURGUER-CARNE"
+        className="menu-title"
+      >
+        Hamburguers carne
+      </div>
 			<div className="menu-section">
 
 				<div onClick={handleOpenModal} className="menu-card">
@@ -75,7 +82,12 @@ export function Menu() {
 			</div>
 
 			
-      <label id="HAMBURGUER-FRANGO">Hamburguers frango</label>
+      <div 
+        id="HAMBURGUER-FRANGO"
+        className="menu-title"
+      >
+        Hamburguers frango
+      </div>
       <div className="menu-section">
 
 				<div className="menu-card">
