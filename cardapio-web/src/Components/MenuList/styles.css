@@ -16,13 +16,13 @@
 }
 
 .menu-list-item {
-	font-size: 14px;
+	font-size: 16px;
 	font-weight: 400;
   align-items: center;
 	text-align: center;
 
 	height: 3.2rem;
-  padding: 0.5rem;
+  padding: 0.3rem;
 	border-bottom: solid transparent 3px;
 	border-radius: 3px;
 }

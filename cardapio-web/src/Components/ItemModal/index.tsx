@@ -40,10 +40,11 @@ export function ItemModal({ closeModal }: ItemModalProps) {
           </li>
           <li className="modal-card-footer-option">
             <p style={{fontSize: "12px", fontWeight: "600"}}>Adiconais</p>
-            + R$ 2,00
+            R$ 2,00
           </li>
         </ul>
       </div>
+
     </div>
   
 	); 

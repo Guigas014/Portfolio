@@ -1,4 +1,4 @@
-import { DragEvent, MouseEvent } from 'react'; 
+import { MouseEvent } from 'react'; 
 
 import './styles.css'; 
  
@@ -15,17 +15,17 @@ export function MenuList() {
 
 
 	 return ( 
-	 	<nav onMouseOver={handleScrollList} className="menu-list-container">
-			<a href="" className="menu-list-item">
-				Hamburguers artesanais 
-			</a>
-
+    <nav onMouseMove={handleScrollList} className="menu-list-container">
 			<a href="#HAMBURGUER-CARNE" className="menu-list-item">
 				Hamburguers de carne
 			</a>
 
 			<a href="#HAMBURGUER-FRANGO"className="menu-list-item">
 				Hamburguers de frango
+			</a>
+
+			<a href="" className="menu-list-item">
+				Hamburguers artesanais 
 			</a>
 
 			<a href="" className="menu-list-item">

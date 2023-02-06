@@ -94,3 +94,23 @@
   gap: 0.5rem;
 }
 
+@media(max-width: 900px) {
+  .modal-card {
+    width: 70%;
+    height: 70%;
+  }
+  .modal-close-button {
+    right: 15%;
+    top: 15%;
+  }
+
+@media(max-width: 540px) {
+  .modal-card {
+    width: 90%;
+    height: 80%;
+  }
+  .modal-close-button {
+    right: 5.2%;
+    top: 10%;
+  }
+}
