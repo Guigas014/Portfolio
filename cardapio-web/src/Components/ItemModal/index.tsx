@@ -5,6 +5,8 @@ import './styles.css';
  
 
 type ItemModalProps = {
+  //id: string;
+  //toggleStatus: boolean;
   closeModal: () => void; 
 }
 

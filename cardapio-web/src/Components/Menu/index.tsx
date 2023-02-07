@@ -1,11 +1,34 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { ItemModal } from '../ItemModal';
 
 import './styles.css'; 
 
 
+interface pratoDados {
+  id: string;
+  title: string,
+  description: string,
+  preco: string,
+  section: string,
+  imageURL: string,
+} 
+
+
 export function Menu() { 
   const [toggleModal, setToggleModal] = useState(false);
+  const [pratos, setPratos] = useState<pratoDados[]>([]);
+  
+  
+  async function getDataFromJSON() {
+    const response = await fetch('./pratos.json', {
+      headers: {
+        Accept: "application/json",
+      }
+    }).then(res => res.json())
+
+    setPratos(response.data)
+    console.log(pratos)
+  }
 
 
   function handleOpenModal() {
@@ -19,14 +42,16 @@ export function Menu() {
     console.log("Modal")
   }
 
+  useEffect(() => {
+    getDataFromJSON() 
+  }, []);
+  
+
 
 	 return ( 
     <>
     {
-      toggleModal === true ?
-        <ItemModal closeModal={handleOpenModal} />
-     :
-       null  
+      toggleModal === true && <ItemModal closeModal={handleOpenModal} />
     }
 
 		<div 
@@ -42,42 +67,25 @@ export function Menu() {
       </div>
 			<div className="menu-section">
 
-				<div onClick={handleOpenModal} className="menu-card">
-				  <img 
-            src="https://images.unsplash.com/photo-1609167921178-e295a98f808f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80" 
-            alt="Hamburguer" 
-            className="card-image"
-          />
-          <div className="card-title">X-Eggs</div>
-          <div className="card-description">
-            Pão, hamburguer de carne, ovo, molho e salada.
-          </div>
-          <div className="card-footer">R$ 16,00</div>
-				</div>
-
-				<div className="menu-card">
-					TESTE
-				</div>
-
-				<div className="menu-card">
-					TESTE
-				</div>
-
-				<div className="menu-card">
-					TESTE
-				</div>
-
-				<div className="menu-card">
-					TESTE
-				</div>
-
-				<div className="menu-card">
-					TESTE
-				</div>
-
-				<div className="menu-card">
-					TESTE
-				</div>
+        {
+          pratos.map(item => {
+            return (
+              item.section === "hamburguer-carne" &&
+				        <div key={item.id} onClick={handleOpenModal} className="menu-card">
+				          <img 
+                    src={item.imageURL} 
+                    alt="Hamburguer" 
+                    className="card-image"
+                  />
+                  <div className="card-title">{item.title}</div>
+                  <div className="card-description">
+                    {item.description}
+                  </div>
+                  <div className="card-footer">R$ {item.preco}</div>
+				        </div>
+            ) 
+          })
+        }
 
 			</div>
 
