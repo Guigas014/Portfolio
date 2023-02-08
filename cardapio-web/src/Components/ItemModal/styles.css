@@ -103,6 +103,7 @@
     right: 15%;
     top: 15%;
   }
+}
 
 @media(max-width: 540px) {
   .modal-card {
