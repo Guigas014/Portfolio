@@ -6,6 +6,10 @@ import './styles.css';
 
 export function MenuList() { 
 
+  //document.addEventListener("scroll", () => {
+    //document.scrollingElement!.scroll()
+  //});
+
   //Pega o movimento de scroll, usando o cursor.
   function handleScrollList(event: MouseEvent) {
 
@@ -15,7 +19,7 @@ export function MenuList() {
 
 
 	 return ( 
-    <nav onMouseMove={handleScrollList} className="menu-list-container">
+    <nav onMouseOver={handleScrollList} className="menu-list-container">
 			<a href="#HAMBURGUER-CARNE" className="menu-list-item">
 				Hamburguers de carne
 			</a>

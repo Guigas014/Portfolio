@@ -38,8 +38,8 @@ export function Header() {
 
     <button onClick={handleOpenSearch} className="header-searchButton">
       {searchOpen === true 
-        ? <XCircle  size={26} color={"red"} /> 
-        : <MagnifyingGlass  size={26} />
+        ? <XCircle  size={26} /> 
+        : <MagnifyingGlass  size={26}  />
       }
     </button>
 
