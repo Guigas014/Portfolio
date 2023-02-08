@@ -17,6 +17,7 @@ interface pratoDados {
 export function Menu() { 
   const [toggleModal, setToggleModal] = useState(false);
   const [pratos, setPratos] = useState<pratoDados[]>([]);
+  const [idModal, setIdModal] = useState<string>("");
   
   
   async function getDataFromJSON() {
@@ -27,20 +28,18 @@ export function Menu() {
     }).then(res => res.json())
 
     setPratos(response.data)
-    console.log(pratos)
   }
 
-
-  function handleOpenModal() {
+  function handleOpenModal(selectedId: string) {
     if (toggleModal === false) {
-      setToggleModal(true);    
+      setIdModal(selectedId) 
+      setToggleModal(true)    
     } 
     else {
-      setToggleModal(false);    
+      setToggleModal(false)    
     }
-
-    console.log("Modal")
   }
+
 
   useEffect(() => {
     getDataFromJSON() 
@@ -51,7 +50,8 @@ export function Menu() {
 	 return ( 
     <>
     {
-      toggleModal === true && <ItemModal closeModal={handleOpenModal} />
+      toggleModal === true && 
+        <ItemModal id={idModal} dados={pratos} closeModal={handleOpenModal} />
     }
 
 		<div 
@@ -70,8 +70,12 @@ export function Menu() {
         {
           pratos.map(item => {
             return (
-              item.section === "hamburguer-carne" &&
-				        <div key={item.id} onClick={handleOpenModal} className="menu-card">
+              item.section === "hamburguer-carne" ?
+				        <div 
+                  key={item.id} 
+                  className="menu-card"
+                  onClick={event => handleOpenModal(item.id)}
+                >
 				          <img 
                     src={item.imageURL} 
                     alt="Hamburguer" 
@@ -83,6 +87,7 @@ export function Menu() {
                   </div>
                   <div className="card-footer">R$ {item.preco}</div>
 				        </div>
+              : null
             ) 
           })
         }
