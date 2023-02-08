@@ -6,10 +6,6 @@ import './styles.css';
 
 export function MenuList() { 
 
-  //document.addEventListener("scroll", () => {
-    //document.scrollingElement!.scroll()
-  //});
-
   //Pega o movimento de scroll, usando o cursor.
   function handleScrollList(event: MouseEvent) {
 

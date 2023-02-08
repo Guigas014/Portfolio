@@ -29,7 +29,7 @@ export function ItemModal({ closeModal, id, dados }: ItemModalProps) {
         item.id === id ?
 
         <div key={item.id} className="modal-container">
-          <button onClick={() => closeModal(item.id)} className="modal-close-button">
+          <button onClick={event => closeModal(item.id)} className="modal-close-button">
             <X size={20} color="white" weight="bold" />
           </button>
 
