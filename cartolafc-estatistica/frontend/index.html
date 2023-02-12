@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cartola - estatística</title>
+
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+  </head>
+
+  <body>
+    <header style="padding: 1em">
+      <span style="font-size: 30px">
+        CartolaFC Estatísticas
+      </span>
+    </header>
+
+    <main>
+      <div class="container">
+        
+        <div class="filter">
+          <ul class="buttons-filter">
+            <li class="drop">Clubes<ul class="lista-clubes"></ul></li>
+            <li class="drop">Posição<ul class="lista-posicoes"></ul></li>
+            <li class="drop">Status<ul class="lista-status"></ul></li>
+            <li class="drop">Preço</li>
+            <li class="drop">Pontos</li>
+            <li class="drop">Média</li>
+            <li class="scouts-button">Scouts</li>
+          </ul>
+        </div>
+
+        <hr>
+
+        <div class="table">
+          <table class="tabela" border="1">
+            
+            <caption class="table-header">
+              JOGADORES
+               <div style="position: relative">
+                <button id="clear-filter">
+                  Limpar Filtros
+                </button>
+              </div>
+            </caption>
+            
+            <thead> 
+              <tr>
+                <th>Nome</th>
+                <th>Clube</th>
+                <th>Posição</th>
+                <th class="rate">
+                  Preço
+                  <button class="rate-button" id="rate-button">&#9672;</button>
+                  <span class="rate-test-value" hidden>&nbsp;</span>
+                </th>
+                <th class="rate">
+                  Pontuação
+                  <button class="rate-button" id="rate-button">&#9672;</button>
+                  <span class="rate-test-value" hidden>&nbsp;</span>
+                </th>
+                <th class="rate">
+                  Média
+                  <button class="rate-button" id="rate-button">&#9672;</button>
+                  <span class="rate-test-value" hidden>&nbsp;</span>
+                </th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            
+            <tbody class="table-body">
+              <!--<tr class="player">-->
+                <!--<td class="nome">Hulk</td>-->
+                <!--<td class="clube">Atlético-MG</td>-->
+                <!--<td class="preco">22,1</td>-->
+                <!--<td class="pontos">12,4</td>-->
+                <!--<td class="media">9,82</td>-->
+              <!--</tr>-->
+            </tbody>
+
+          </table>
+        </div>
+
+        <span class="erro-table-null">
+          Não existem campos correspondentes na tabela!
+        </span>
+
+      </div>
+    </main>
+    
+    <footer></footer>
+
+    <script src="./scripts.js" type="module"></script>
+  </body>
+</html>

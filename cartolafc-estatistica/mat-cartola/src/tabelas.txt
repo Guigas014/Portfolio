@@ -1,0 +1,16 @@
+
+model Clube {
+  id          Int @id @default(autoincrement())
+  nome        String
+  abreviacao  String
+
+  @@map("clubes")
+}
+
+model status {
+  id     Int @id @default(autoincrement())
+  nome   String
+
+  @@map("status")
+}
+

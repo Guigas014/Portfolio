@@ -1,0 +1,156 @@
+.shadow { display: none; }
+.show { display: block; }
+
+body {
+  background-color: #d2d2d2; 
+  display: flex; 
+  justify-content: center; 
+  text-align: center; 
+  align-items: center; 
+  flex-direction: column;
+}
+
+.buttons-filter {
+  display: flex;  
+  justify-content: space-between;
+  padding: 1em; 
+  list-style: none;
+}
+
+.drop {
+  position: relative;
+  padding: 0.5em 1em;
+  font-weight: bold; 
+  font-size: 18px;
+
+  cursor: pointer;
+}
+
+.drop:hover {
+  background-color: gray;
+  color: white;
+}
+
+.drop:hover .lista-clubes { display: block; } 
+
+.drop:hover .lista-posicoes { display: block; }
+
+.drop:hover .lista-status { display: block; }
+
+.lista-clubes, .lista-posicoes, .lista-status {
+  display: none;
+  padding: 0;
+  width: 9em;
+  left: 0px;
+
+  list-style: none;
+  position: absolute;
+  background-color: #b2b2b2;
+}
+
+.lista-clubes a, .lista-posicoes a, .lista-status a {
+  text-decoration: none;
+  color: black;
+  padding: 5px;
+  display: block;
+}
+
+a:hover {
+  background-color: gray;
+  font-weight: bold;
+  color: white;
+
+  cursor: pointer;
+}
+
+.scouts-button {
+  padding: 0.5em 1em;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.scouts-button:hover {
+  background-color: gray;
+  color: white;
+
+  cursor: pointer;
+}
+
+.table {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+table {
+  background-color: silver;
+
+  border-collapse: collapse;
+  border: 1px solid #dddddd;
+
+  text-align: left;
+  margin-bottom: 2em;
+  font-size: 18px;
+}
+
+.table-header {
+  padding-bottom: 0.5em;
+  font-size: 25px;
+}
+
+#clear-filter {
+  position: absolute; 
+  right: 0;
+  bottom: 0;
+  background-color: #b2b2b2;
+  padding: 8px 22px;
+  border: none;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#clear-filter:hover {
+  background-color: gray;
+  color: white;
+
+  cursor: pointer;
+}
+
+.rate {
+  height: .5em;
+  padding-bottom: .4em;
+}
+
+.rate-button {
+  background-color: transparent; 
+  width: 1.5em; 
+  height: 1em;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+th {
+  padding-left: .4em;
+}
+
+td {
+  width: 140px;
+  padding: .2em .10em .2em .4em;
+}
+
+.erro-table-null {
+  font-size: 20px;
+  color: red;
+  margin: .5em;
+
+  display: none;
+}
+

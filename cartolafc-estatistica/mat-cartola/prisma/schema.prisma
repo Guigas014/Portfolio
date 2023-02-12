@@ -1,0 +1,26 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Posicoes {
+  id         Int    @id @default(autoincrement())
+  nome       String
+  abreviacao String
+}
+
+model Status {
+  id     Int @id @default(autoincrement())
+  nome   String
+}
+
+model Clubes {
+  id          Int @id @default(autoincrement())
+  nome        String
+  abreviacao  String
+}
+
