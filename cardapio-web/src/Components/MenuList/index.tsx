@@ -28,7 +28,7 @@ export function MenuList() {
 				Hamburguers artesanais 
 			</a>
 
-			<a href="" className="menu-list-item">
+			<a href="#HOT-DOG" className="menu-list-item">
 				Hot Dog
 			</a>
 
@@ -40,11 +40,11 @@ export function MenuList() {
 				Crepes
 			</a>
 
-			<a href="" className="menu-list-item">
+			<a href="#BEBIDAS" className="menu-list-item">
 				Bebidas
 			</a>
 
-			<a href="" className="menu-list-item">
+			<a href="#SOBREMESAS" className="menu-list-item">
 				Sobremesas
 			</a>
 

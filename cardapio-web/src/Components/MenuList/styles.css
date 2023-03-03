@@ -30,7 +30,6 @@
 .menu-list-item:hover {
 	border-bottom: solid 3px #ea580c;
 	color: #ea580c;
-	
 }
 
 @media(max-width: 900px) {

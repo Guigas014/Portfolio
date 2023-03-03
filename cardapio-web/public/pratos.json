@@ -15,6 +15,110 @@
       "preco": "16,00",
       "section": "hamburguer-carne",
       "imageURL": "https://images.unsplash.com/photo-1609167921178-e295a98f808f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80"
-    } 
+    }, 
+    {
+      "id": "03",
+      "title": "X-Chilly",
+      "description": "Pão ,hamburguer de carne, queijo prato, molho especial picante e salada.",
+      "preco": "22,00",
+      "section": "hamburguer-carne",
+      "imageURL": "https://images.unsplash.com/photo-1609167921919-9436787fdecd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+    },
+    {
+      "id": "04",
+      "title": "X-Frango",
+      "description": "Pão ,peito de frango crocante, queijo catupiry, molho especial com ervas finase salada.",
+      "preco": "15,00",
+      "section": "hamburguer-frango",
+      "imageURL": "https://images.unsplash.com/photo-1615297928064-24977384d0da?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=812&q=80"
+    },
+    {
+      "id": "05",
+      "title": "X-Duplo",
+      "description": "Pão ,2 hamburguer de frango, picles, queijo cheddar, molho especial rose e salada.",
+      "preco": "25,00",
+      "section": "hamburguer-frango",
+      "imageURL": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=699&q=80"
+    },
+    {
+      "id": "06",
+      "title": "X-Podrão",
+      "description": "Pão ,hamburguer de frango, queijo prato, picles, molho especial pomodoro, queijo catupiry e salada.",
+      "preco": "28,00",
+      "section": "hamburguer-frango",
+      "imageURL": "/hamburger1.jpg"
+    },
+    {
+      "id": "07",
+      "title": "X-Cachorro-Simples",
+      "description": "Pão , salsisha, queijo mussarela, catchup e cebolinha",
+      "preco": "10,00",
+      "section": "cachorro-quente",
+      "imageURL": "https://images.unsplash.com/photo-1613482084286-41f25b486fa2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+    },
+    {
+      "id": "08",
+      "title": "X-Cachorro-Defumado",
+      "description": "Pão , salsisha, queijo mussarela, mostarda, bacon e batata frita",
+      "preco": "14,00",
+      "section": "cachorro-quente",
+      "imageURL": "https://cdn.pixabay.com/photo/2022/11/21/02/44/hot-dog-7605754_960_720.jpg"
+    },
+    {
+      "id": "09",
+      "title": "X-Cachorro-Na-Chapa",
+      "description": "Pão , salsisha, cebola caramelada, queijo mussarela, queilo catupiry, mostarda e pimenta",
+      "preco": "16,00",
+      "section": "cachorro-quente",
+      "imageURL": "https://cdn.pixabay.com/photo/2017/06/24/05/26/hot-dog-2436747_960_720.jpg"
+    },
+    {
+      "id": "10",
+      "title": "Sucos",
+      "description": "Suco natural de polpa. Sabores: Laranja, Abacaxi, Caju, Maracaju, Limão, Manga e Uva",
+      "preco": "8,00",
+      "section": "bebidas",
+      "imageURL": "https://cdn.pixabay.com/photo/2020/04/02/18/01/glass-4996146_960_720.png"
+    },
+    {
+      "id": "11",
+      "title": "Refrigerantes",
+      "description": "Refrigerantes diversos. Guaraná, Coca-Cola, Sprite, Kuat, Soda, H2O",
+      "preco": "6,00",
+      "section": "bebidas",
+      "imageURL": "https://cdn.pixabay.com/photo/2016/06/02/10/55/drinks-1430739_960_720.png"
+    },
+    {
+      "id": "12",
+      "title": "Água",
+      "description": "Sem gás, Com gás, Com gelo e limão",
+      "preco": "4,00",
+      "section": "bebidas",
+      "imageURL": "https://cdn.pixabay.com/photo/2014/06/26/16/33/cocktail-377960_960_720.png"
+    },
+    {
+      "id": "13",
+      "title": "Picolé",
+      "description": "Sabores: chocolate, moranngo, uva, limão, coco, flocos, leite condensado, doce de leite",
+      "preco": "4,00",
+      "section": "sobremesas",
+      "imageURL": "https://cdn.pixabay.com/photo/2013/07/12/19/04/popsicle-154321_960_720.png"
+    },
+    {
+      "id": "14",
+      "title": "Sorvete",
+      "description": "Sabores: chocolate, moranngo, coco, flocos, leite condensado, creme, napolitano",
+      "preco": "10,00",
+      "section": "sobremesas",
+      "imageURL": "https://cdn.pixabay.com/photo/2016/06/02/22/14/ice-1432278_960_720.png"
+    },
+    {
+      "id": "15",
+      "title": "Doces",
+      "description": "Brigadeiro, Beijinho, Mini pudim, Cupcake, Pé de moleque, Pé de moça, Cocada",
+      "preco": "6,00",
+      "section": "sobremesas",
+      "imageURL": "https://cdn.pixabay.com/photo/2016/12/13/02/39/brigadier-1903163_960_720.png"
+    }
   ]
 }

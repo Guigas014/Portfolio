@@ -78,7 +78,42 @@ export function Menu() {
                 >
 				          <img 
                     src={item.imageURL} 
-                    alt="Hamburguer" 
+                    alt={item.title} 
+                    className="card-image"
+                  />
+                  <div className="card-title">{item.title}</div>
+                  <div className="card-description">
+                    {item.description}
+                  </div>
+                  <div className="card-footer">R$ {item.preco}</div>
+				        </div>
+              : null
+            ) 
+          })
+        }
+
+			</div>
+			
+      <div 
+        id="HAMBURGUER-FRANGO"
+        className="menu-title"
+      >
+        Hamburguers frango
+      </div>
+      <div className="menu-section">
+
+        {
+          pratos.map(item => {
+            return (
+              item.section === "hamburguer-frango" ?
+				        <div 
+                  key={item.id} 
+                  className="menu-card"
+                  onClick={event => handleOpenModal(item.id)}
+                >
+				          <img 
+                    src={item.imageURL} 
+                    alt={item.title} 
                     className="card-image"
                   />
                   <div className="card-title">{item.title}</div>
@@ -94,42 +129,108 @@ export function Menu() {
 
 			</div>
 
-			
       <div 
-        id="HAMBURGUER-FRANGO"
+        id="HOT-DOG"
         className="menu-title"
       >
-        Hamburguers frango
+        Hot Dog
       </div>
       <div className="menu-section">
 
-				<div className="menu-card">
-					TESTE
-				</div>
+        {
+          pratos.map(item => {
+            return (
+              item.section === "cachorro-quente" ?
+				        <div 
+                  key={item.id} 
+                  className="menu-card"
+                  onClick={event => handleOpenModal(item.id)}
+                >
+				          <img 
+                    src={item.imageURL} 
+                    alt={item.title}
+                    className="card-image"
+                  />
+                  <div className="card-title">{item.title}</div>
+                  <div className="card-description">
+                    {item.description}
+                  </div>
+                  <div className="card-footer">R$ {item.preco}</div>
+				        </div>
+              : null
+            ) 
+          })
+        }
 
-				<div className="menu-card">
-					TESTE
-				</div>
+			</div>
 
-				<div className="menu-card">
-					TESTE
-				</div>
+      <div 
+        id="BEBIDAS"
+        className="menu-title"
+      >
+        Bebidas
+      </div>
+      <div className="menu-section">
 
-				<div className="menu-card">
-					TESTE
-				</div>
+        {
+          pratos.map(item => {
+            return (
+              item.section === "bebidas" ?
+				        <div 
+                  key={item.id} 
+                  className="menu-card"
+                  onClick={event => handleOpenModal(item.id)}
+                >
+				          <img 
+                    src={item.imageURL} 
+                    alt={item.title} 
+                    className="card-image"
+                  />
+                  <div className="card-title">{item.title}</div>
+                  <div className="card-description">
+                    {item.description}
+                  </div>
+                  <div className="card-footer">R$ {item.preco}</div>
+				        </div>
+              : null
+            ) 
+          })
+        }
 
-				<div className="menu-card">
-					TESTE
-				</div>
+			</div>
 
-				<div className="menu-card">
-					TESTE
-				</div>
+      <div 
+        id="SOBREMESAS"
+        className="menu-title"
+      >
+        Sobremesas
+      </div>
+      <div className="menu-section">
 
-				<div className="menu-card">
-					TESTE
-				</div>
+        {
+          pratos.map(item => {
+            return (
+              item.section === "sobremesas" ?
+				        <div 
+                  key={item.id} 
+                  className="menu-card"
+                  onClick={event => handleOpenModal(item.id)}
+                >
+				          <img 
+                    src={item.imageURL} 
+                    alt={item.title} 
+                    className="card-image"
+                  />
+                  <div className="card-title">{item.title}</div>
+                  <div className="card-description">
+                    {item.description}
+                  </div>
+                  <div className="card-footer">R$ {item.preco}</div>
+				        </div>
+              : null
+            ) 
+          })
+        }
 
 			</div>
 
