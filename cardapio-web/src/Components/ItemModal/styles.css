@@ -96,8 +96,12 @@
 .modal-card-footer-option {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
+  /*flex-wrap: wrap;*/
   gap: 0.5rem;
+}
+
+li {
+  font-size: 14px;
 }
 
 @media(max-width: 900px) {
