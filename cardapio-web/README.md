@@ -9,13 +9,12 @@ Para facilitar a vida do cliente e do garçom!
   <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#memo-licença">Licença</a>
 </p>
 
 <br>
 
 <p align="center">
-  <img alt="cartao da copa" src=".github/preview.png" width="100%">
+  <img alt="Home Cardápio Digital" src="preview.png" width="100%">
 </p>
 
 ## 🚀 Tecnologias
