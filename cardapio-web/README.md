@@ -14,7 +14,7 @@ Para facilitar a vida do cliente e do garçom!
 <br>
 
 <p align="center">
-  <img alt="Home Cardápio Digital" src="preview.png" width="100%">
+  <img alt="Home Cardápio Digital" src="preview.png" width="80%" height="80%">
 </p>
 
 ## 🚀 Tecnologias
