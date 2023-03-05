@@ -35,8 +35,11 @@ Trazendo as informações do cardápio fisíco direto par um meio digital.
 
 ## 🔖 Layout
 
-Você pode visualizar o layout do projeto através [DESSE QR-Code]
-
 <p align="center">
   <img alt="QR-Code Cardápio Digital" src="qr-code-cardapio.png" width="30%" height="30%">
+  <br>
+  Você pode visualizar o layout do projeto através desse QR-Code
 </p>
+
+
+
