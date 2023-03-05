@@ -35,4 +35,8 @@ Trazendo as informações do cardápio fisíco direto par um meio digital.
 
 ## 🔖 Layout
 
-Você pode visualizar o layout do projeto através [DESSE LINK]()
+Você pode visualizar o layout do projeto através [DESSE QR-Code]
+
+<p align="center">
+  <img alt="QR-Code Cardápio Digital" src="qr-code-cardapio.png" width="80%" height="80%">
+</p>
