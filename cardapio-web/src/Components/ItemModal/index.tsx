@@ -1,6 +1,8 @@
 import React from 'react'; 
 import { X } from 'phosphor-react';
 
+import { FooterModalOption } from '../FooterModalOption';
+
 import './styles.css'; 
  
 
@@ -21,6 +23,7 @@ type ItemModalProps = {
 
 
 export function ItemModal({ closeModal, id, dados }: ItemModalProps) { 
+
 
   return ( 
     <div className="modal-container">
@@ -44,18 +47,13 @@ export function ItemModal({ closeModal, id, dados }: ItemModalProps) {
               {item.description}
             </div>
             <ul className="modal-card-footer">
-              <li className="modal-card-footer-option">
-                <p style={{fontSize: "12px", fontWeight: "600"}}>Simples</p>
-                R$ {item.preco}
-              </li>
-              <li className="modal-card-footer-option">
-                <p style={{fontSize: "12px", fontWeight: "600"}}>Combo</p>
-                R$ { parseFloat(item.preco) * 2 },00
-              </li>
-              <li className="modal-card-footer-option">
-                <p style={{fontSize: "12px", fontWeight: "600"}}>Adiconais</p>
-                R$ 2,00
-              </li>
+
+              <FooterModalOption 
+                preco={item.preco} 
+                section={item.section}
+                title={item.title} 
+              /> 
+
             </ul>
           </div>
         </div>

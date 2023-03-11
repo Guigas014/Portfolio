@@ -93,12 +93,12 @@
   list-style: none;
 }
 
-.modal-card-footer-option {
-  display: flex;
-  flex-direction: column;
-  /*flex-wrap: wrap;*/
-  gap: 0.5rem;
-}
+/*.modal-card-footer-option {*/
+  /*display: flex;*/
+  /*flex-direction: column;*/
+  /*[>flex-wrap: wrap;<]*/
+  /*gap: 0.5rem;*/
+/*}*/
 
 li {
   font-size: 14px;
