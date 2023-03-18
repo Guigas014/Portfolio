@@ -8,7 +8,7 @@ Esse placar é responsive, possibilitando o uso em smartphones e tablets.
 <p align="center">
   <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-regra do jogo">Regra do Jogo</a>&nbsp;&nbsp;&nbsp;
+  
 </p>
 
 <br>
