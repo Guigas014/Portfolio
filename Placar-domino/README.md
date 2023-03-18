@@ -1,6 +1,8 @@
 <h1 align="center">Placar para jogo de Dominó</h1>
 
-Placar básico, desenvolvido em Javascript, CSS e HTML, com funcionalidades básicas para marcar os jogos de dominó.
+<br>
+
+Placar básico, desenvolvido em Javascript, CSS e HTML, com funcionalidades básicas para marcar os jogos de dominó.<br>
 Esse placar é responsive, possibilitando o uso em smartphones e tablets.
 
 <br>
@@ -8,7 +10,7 @@ Esse placar é responsive, possibilitando o uso em smartphones e tablets.
 <p align="center">
   <a href="#layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#tecnologias">Regras do jogo</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#tecnologias">Regras do jogo</a>&nbsp;&nbsp;&nbsp;
 </p>
 
 <br>
