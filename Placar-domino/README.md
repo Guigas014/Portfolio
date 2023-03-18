@@ -6,9 +6,9 @@ Esse placar é responsive, possibilitando o uso em smartphones e tablets.
 <br>
 
 <p align="center">
-  <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-tecnologias">Regras do jogo</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#tecnologias">Regras do jogo</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 </p>
 
 <br>
@@ -16,7 +16,7 @@ Esse placar é responsive, possibilitando o uso em smartphones e tablets.
 ## Layout
 
 <p align="center">
-  <img alt="Placar Dominó" src="captura-placar.png" width="45%" height="45%">
+  <img alt="Placar Dominó" src="captura-placar.png" width="50%" height="50%">
 </p>
 
 <br>
