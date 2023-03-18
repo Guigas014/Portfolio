@@ -1,25 +1,30 @@
-# Placar para jogo de Dominó
-
-<p align="center">Placar básico, desenvolvido em Javascript, CSS e HTML, com funcionalidades básicas para marcar os jogos de dominó.</p>
-
-<p>Esse placar é responsive, possibilitando o uso em smartphones e tablets.</p>
+<h1 align="center">Placar para jogo de Dominó</h1>
 
 <p align="center">
-  <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-projeto">Regra do Jogo</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+    Placar básico, desenvolvido em Javascript, CSS e HTML, com funcionalidades básicas para marcar os jogos de dominó.
+   
+    Esse placar é responsive, possibilitando o uso em smartphones e tablets.
 </p>
 
 <br>
 
-## 🔖 Layout
-
 <p align="center">
-  <img alt="Placar Dominó" src="captura-placar.png" width="80%" height="80%">
+  <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-regra do jogo">Regra do Jogo</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 </p>
 
+<br>
 
-## 🚀 Tecnologias
+## Layout
+
+<p align="center">
+  <img alt="Placar Dominó" src="captura-placar.png" width="60%" height="60%">
+</p>
+
+<br>
+
+## Tecnologias
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
@@ -27,7 +32,8 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - Javascript
 - CSS
 - Github
-- 
+
+<br>
 
 ## Regra do Jogo:
 
