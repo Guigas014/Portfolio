@@ -8,7 +8,7 @@ Esse placar é responsive, possibilitando o uso em smartphones e tablets.
 <p align="center">
   <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  
+  <a href="#-tecnologias">Regras do jogo</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 </p>
 
 <br>
@@ -32,7 +32,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 <br>
 
-## Regra do Jogo:
+## Regras do Jogo
 
 A cada partida ganha, um ponto deve ser marcado no *Placar Parcial*. Tanto do *Jogador1* como do *Jogador2*.<br>
 O Jogador que conseguir três pontos consecultivos, marcará um ponto no *Placar Geral* automaticamente.<br>
