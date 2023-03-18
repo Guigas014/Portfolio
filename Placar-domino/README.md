@@ -1,10 +1,35 @@
-## Placar para jogo de Dominó
+# Placar para jogo de Dominó
 
-Placar básico, desenvolvido em Javascript, CSS e HTML, com funcionalidades básicas para marcar os jogos de dominó.
+<p align="center">Placar básico, desenvolvido em Javascript, CSS e HTML, com funcionalidades básicas para marcar os jogos de dominó.</p>
 
-Esse placar é responsive, possibilitando o uso em smartphones e tablets.
+<p>Esse placar é responsive, possibilitando o uso em smartphones e tablets.</p>
 
-### Regra do Jogo:
+<p align="center">
+  <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-projeto">Regra do Jogo</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+</p>
+
+<br>
+
+## 🔖 Layout
+
+<p align="center">
+  <img alt="Placar Dominó" src="captura-placar.png" width="80%" height="80%">
+</p>
+
+
+## 🚀 Tecnologias
+
+Esse projeto foi desenvolvido com as seguintes tecnologias:
+
+- HTML
+- Javascript
+- CSS
+- Github
+- 
+
+## Regra do Jogo:
 
 A cada partida ganha, um ponto deve ser marcado no *Placar Parcial*. Tanto do *Jogador1* como do *Jogador2*.<br>
 O Jogador que conseguir três pontos consecultivos, marcará um ponto no *Placar Geral* automaticamente.<br>
