@@ -15,7 +15,7 @@ export function PlayerCard({ name, player }: cardProps) {
     <View 
       style={[
         styles.card,
-        player === 1 ? {borderColor: "green"} : {borderColor: "orange"}
+        player === 1 ? {borderColor: "#31A9DE"} : {borderColor: "#E53A40"}
       ]}
     >
       <Text style={styles.playerName}>{name}</Text>

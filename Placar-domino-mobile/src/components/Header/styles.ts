@@ -6,25 +6,26 @@ export const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "flex-end",
     justifyContent: "center",
-    gap: 40,
     width: "100%",
-    paddingBottom: 20
+    paddingBottom: 10,
+
+    position: "relative"
   },
   settingsButton: {
-    alignItems: "center",
-    justifyContent: "center",
-    //backgroundColor: "lightblue",
-    padding: 2,
-    width: 30,
-    height: 30
+    position: "absolute",
+    right: 30,
+    top: 95
   },
   backButton: {
-    alignItems: "center",
-    justifyContent: "center",
+    position: "absolute",
+    left: 30,
+    top: 96
+    //alignItems: "center",
+    //justifyContent: "center",
     //backgroundColor: "lightblue",
-    padding: 2,
-    width: 30,
-    height: 30
+    //padding: 2,
+    //width: 30,
+    //height: 30
   },
   title: {
     color: "#C2C2C2",

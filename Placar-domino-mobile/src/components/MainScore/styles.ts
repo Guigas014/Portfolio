@@ -23,6 +23,6 @@ export const styles = StyleSheet.create({
 
     fontSize: 34,
     fontFamily: "DMSans_700Bold",
-    color: "blue"
+    color: "#efdc04"
   }
 });
