@@ -32,17 +32,28 @@ export const styles = StyleSheet.create({
   saveButton: {
     width: "50%",
     height: 45,
-    padding: 10,
+    padding: 12,
     marginTop: 30,
+    marginBottom: 30,
     alignItems: "center",
 
     backgroundColor: "#8D8D99",
     borderRadius: 8
   },
   save: {
-    fontSize: 18,
+    fontSize: 16,
     fontFamily: "DMSans_700Bold",
     color: "#323238",
     textTransform: "uppercase"
   },
+  manual: {
+    fontSize: 16,
+    fontFamily: "DMSans_400Regular",
+    color: "white",
+    textAlign: "justify",
+
+    marginHorizontal: 25,  
+    marginTop: 4,
+    marginBottom: 2
+  }
 });

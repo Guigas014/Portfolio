@@ -25,8 +25,9 @@ const [fontsLoaded] = useFonts({
 
  return (
    <>
-     { fontsLoaded ? <Routes /> : <Loading /> }
      <StatusBar barStyle="light-content" backgroundColor="transparent" translucent />
+
+     { fontsLoaded ? <Routes /> : <Loading /> }
    </>
  );
 }
