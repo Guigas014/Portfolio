@@ -66,7 +66,7 @@ export function Settings() {
       </TouchableOpacity>
 
 
-      <Text style={styles.label}>Manual</Text>
+      <Text style={styles.label}>Instruções</Text>
 
       <Text style={styles.manual}>
         Para marcar 1 ponto, de um toque simples no 
