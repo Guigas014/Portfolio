@@ -2,7 +2,9 @@
 
 <br>
 
-Placar básico, desenvolvido em React Native, com funcionalidades básicas para marcar os jogos de dominó.<br>
+<p align="center">
+    Placar básico, desenvolvido em React Native, com funcionalidades básicas para marcar os jogos de dominó.
+</p>
 
 <br>
 
@@ -17,7 +19,7 @@ Placar básico, desenvolvido em React Native, com funcionalidades básicas para 
 ## Layout
 
 <p align="center">
-  <img alt="Placar Dominó" src="" width="50%" height="50%">
+  <img alt="Placar Dominó" src="tela-principal.png" width="50%" height="50%">
 </p>
 
 <br>
@@ -28,7 +30,6 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 - React Native
 - Expo
-- CSS
 - Github
 
 <br>
