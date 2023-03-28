@@ -19,7 +19,7 @@
 ## Layout
 
 <p align="center">
-  <img alt="Placar Dominó" src="tela-principal.png" width="50%" height="50%">
+  <img alt="Placar Dominó" src="tela-principal.png" width="20%" height="40%">
 </p>
 
 <br>
