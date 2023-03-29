@@ -1,0 +1,9 @@
+manage project
+
+USAGE
+  $ eas project:COMMAND
+
+COMMANDS
+  project:info  information about the current project
+  project:init  create or link an EAS project
+

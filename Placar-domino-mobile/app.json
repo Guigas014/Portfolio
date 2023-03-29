@@ -18,7 +18,7 @@
       "supportsTablet": true
     },
     "android": {
-      "package": "com.placardomino",
+      "package": "com.guigas014.placardominomobile",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
@@ -29,7 +29,7 @@
     },
     "extra": {
       "eas": {
-        "projectId": "7b015763-cb69-47db-8022-3a50ce97be79"
+        "projectId": "2996c30c-da72-4f23-95c2-667529755d50"
       }
     }
   }
