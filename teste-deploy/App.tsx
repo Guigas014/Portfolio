@@ -1,11 +1,16 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 
+import { Home } from './src/components/Home';
+
+
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>OK! O deploy está funcionando muito bem obrigado!</Text>
       <StatusBar style="auto" />
+
+      <Text>OK! O deploy está funcionando muito bem obrigado!</Text>
+      <Home />
     </View>
   );
 }

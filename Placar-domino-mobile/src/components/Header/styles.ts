@@ -20,12 +20,6 @@ export const styles = StyleSheet.create({
     position: "absolute",
     left: 30,
     top: 96
-    //alignItems: "center",
-    //justifyContent: "center",
-    //backgroundColor: "lightblue",
-    //padding: 2,
-    //width: 30,
-    //height: 30
   },
   title: {
     color: "#C2C2C2",

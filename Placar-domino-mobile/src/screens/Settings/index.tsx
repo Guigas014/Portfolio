@@ -11,8 +11,8 @@ export let NAMEPLAYER2 = "Player 2";
 
 
 export function Settings() { 
-  const [namePlayer1, setNamePlayer1] = useState<string>(NAMEPLAYER1);
-  const [namePlayer2, setNamePlayer2] = useState<string>(NAMEPLAYER2);
+  const [namePlayer1, setNamePlayer1] = useState(NAMEPLAYER1);
+  const [namePlayer2, setNamePlayer2] = useState(NAMEPLAYER2);
   const [inputBorder1, setInputBorder1] = useState(false);
   const [inputBorder2, setInputBorder2] = useState(false);
     

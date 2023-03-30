@@ -19,15 +19,15 @@ const [fontsLoaded] = useFonts({
   DMSans_700Bold
 });
 
- //if (!fontsLoaded) {      
-   //return ( <Loading /> );
- //}
+ if (!fontsLoaded) {      
+   return ( <Loading /> );
+ }
 
  return (
    <>
      <StatusBar barStyle="light-content" backgroundColor="transparent" translucent />
 
-     { fontsLoaded ? <Routes /> : <Loading /> }
+     <Routes />
    </>
  );
 }
