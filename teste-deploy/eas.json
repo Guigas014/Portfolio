@@ -8,13 +8,15 @@
       "distribution": "internal",
       "ios": {
         "resourceClass": "m-medium"
-      }
+      },
+      "channel": "development"
     },
     "preview": {
       "distribution": "internal",
       "ios": {
         "resourceClass": "m-medium"
-      }
+      },
+      "channel": "preview"
     },
     "preview2": {
       "distribution": "internal",
@@ -23,12 +25,14 @@
       },
       "android": {
         "buildType": "apk"
-      }
+      },
+      "channel": "preview2"
     },
     "production": {
       "ios": {
         "resourceClass": "m-medium"
-      }
+      },
+      "channel": "production"
     }
   },
   "submit": {

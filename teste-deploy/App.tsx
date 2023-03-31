@@ -9,7 +9,7 @@ export default function App() {
     <View style={styles.container}>
       <StatusBar style="auto" />
 
-      <Text>OK! O deploy está funcionando muito bem obrigado!</Text>
+      <Text style={styles.text}>OK! O deploy está funcionando muito bem obrigado!</Text>
       <Home />
     </View>
   );
@@ -18,8 +18,11 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#121214',
     alignItems: 'center',
     justifyContent: 'center',
   },
+  text: {
+    color: '#FFF'
+  }
 });

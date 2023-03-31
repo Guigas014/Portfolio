@@ -1,4 +1,4 @@
-import { StatusBar, StyleSheet, View } from 'react-native';
+import { StyleSheet, View, StatusBar } from 'react-native';
 
 import { 
   useFonts, 
@@ -23,10 +23,10 @@ const [fontsLoaded] = useFonts({
    return ( <Loading /> );
  }
 
+
  return (
    <>
      <StatusBar barStyle="light-content" backgroundColor="transparent" translucent />
-
      <Routes />
    </>
  );
