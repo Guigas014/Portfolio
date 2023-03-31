@@ -7,15 +7,15 @@ import { Feather } from '@expo/vector-icons';
 import { PlayerCard } from '../../components/PlayerCard';
 import { MainScore } from '../../components/MainScore';
 import { Header } from '../../components/Header';
-//import { NAMEPLAYER1, NAMEPLAYER2 } from '../Settings';
+import { NAMEPLAYER1, NAMEPLAYER2 } from '../Settings';
  
 import { styles } from './styles';  
 
 
 
 export function Home() {   
-  const [newNamePlayer1, setNewNamePlayer1] = useState("Player1");
-  const [newNamePlayer2, setNewNamePlayer2] = useState("Player2");
+  const [newNamePlayer1, setNewNamePlayer1] = useState(NAMEPLAYER1);
+  const [newNamePlayer2, setNewNamePlayer2] = useState(NAMEPLAYER2);
   const [parcialScore1, setParcialScore1] = useState(0);
   const [parcialScore2, setParcialScore2] = useState(0);
   const [totalScore1, setTotalScore1] = useState(0);
@@ -26,7 +26,7 @@ export function Home() {
   //Essa função é acionada pelo botão do componente PlayerCard.
   //Nessa função eu uso uma variável (nameTeste) que vem do PlayerCard. 
   function handleUpdateParcialScore(nameTeste: string) {
-    if (nameTeste === "Player1") {
+    if (nameTeste === NAMEPLAYER1) {
       let newParcialScore1 = parcialScore1 + 1;
       setParcialScore1(newParcialScore1);
       setParcialScore2(0);
@@ -37,7 +37,7 @@ export function Home() {
         setParcialScore1(0);
       }
     }    
-    if (nameTeste === "Player2") {
+    if (nameTeste === NAMEPLAYER2) {
       let newParcialScore2 = parcialScore2 + 1;
       setParcialScore2(newParcialScore2);
       setParcialScore1(0);
@@ -64,8 +64,8 @@ export function Home() {
 
   //Atualiza o nome dos players. 
   function updateNames() {
-    setNewNamePlayer1("Player1"); 
-    setNewNamePlayer2("Player2"); 
+    setNewNamePlayer1(NAMEPLAYER1); 
+    setNewNamePlayer2(NAMEPLAYER2); 
   }
   
 
