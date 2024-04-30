@@ -1,7 +1,8 @@
 import React from "react"
 import { StyleSheet, Text, View } from "react-native"
 
-import colors from "../../constants/Colors"
+import colors from "@/styles/Colors"
+import { font } from "@/styles/fontFamily"
 
 export default function Home() {
   return (
@@ -20,6 +21,6 @@ const styles = StyleSheet.create({
   text: {
     color: colors.light.tabIconSelected,
     fontSize: 20,
-    fontWeight: "bold",
+    fontFamily: font.bold,
   },
 })
