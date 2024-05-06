@@ -4,14 +4,10 @@ import { StyleSheet, Text, View } from "react-native"
 import { colors } from "@/styles/Colors"
 import { font } from "@/styles/fontFamily"
 
-type DrawerProps = {
-  closeDrawer: () => void
-}
-
-export default function Home() {
+export default function Settings() {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Testando o APP!!!</Text>
+      <Text style={styles.text}>Settings page!!!</Text>
     </View>
   )
 }
@@ -21,8 +17,6 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
-    borderColor: "orange",
-    borderWidth: 4,
   },
   text: {
     color: colors.brown,

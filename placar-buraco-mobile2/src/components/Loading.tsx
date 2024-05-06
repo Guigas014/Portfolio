@@ -1,14 +1,9 @@
 import { ActivityIndicator, StyleSheet } from "react-native"
 
-import colors from "@/styles/Colors"
+import { colors } from "@/styles/Colors"
 
 export function Loading() {
-  return (
-    <ActivityIndicator
-      style={styles.container}
-      color={colors.light.tabIconSelected}
-    />
-  )
+  return <ActivityIndicator style={styles.container} color={colors.asparagus} />
 }
 
 const styles = StyleSheet.create({
@@ -16,6 +11,6 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "black",
+    backgroundColor: colors.gray,
   },
 })
