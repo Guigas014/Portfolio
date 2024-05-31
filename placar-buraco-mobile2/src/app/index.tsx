@@ -3,6 +3,7 @@ import { StyleSheet, Text, View } from "react-native"
 
 import { colors } from "@/styles/Colors"
 import { font } from "@/styles/fontFamily"
+import { SectionScores } from "@/components/SectionScores"
 
 type DrawerProps = {
   closeDrawer: () => void
@@ -11,7 +12,8 @@ type DrawerProps = {
 export default function Home() {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Testando o APP!!!</Text>
+      <SectionScores playerNum={1} name="Guilherme" score="2500" />
+      <SectionScores playerNum={2} name="Luisa" score="2100" />
     </View>
   )
 }
@@ -19,8 +21,12 @@ export default function Home() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
+    alignItems: "flex-start",
+    justifyContent: "flex-start",
+    gap: 60,
+    padding: 40,
+    paddingLeft: 60,
+
     borderColor: "orange",
     borderWidth: 4,
   },
