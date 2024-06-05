@@ -52,8 +52,12 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: "row",
     alignItems: "center",
-    justifyContent: "center",
+    justifyContent: "flex-start",
     gap: 30,
+    paddingLeft: 30,
+
+    width: 300,
+    height: 60,
   },
   playerInfo: {
     gap: 4,

@@ -3,7 +3,9 @@ import { StyleSheet, Text, View } from "react-native"
 
 import { colors } from "@/styles/Colors"
 import { font } from "@/styles/fontFamily"
+
 import { SectionScores } from "@/components/SectionScores"
+import { ParcialSocres } from "@/components/ParcialScores"
 
 type DrawerProps = {
   closeDrawer: () => void
@@ -14,6 +16,8 @@ export default function Home() {
     <View style={styles.container}>
       <SectionScores playerNum={1} name="Guilherme" score="2500" />
       <SectionScores playerNum={2} name="Luisa" score="2100" />
+
+      <ParcialSocres />
     </View>
   )
 }
@@ -21,14 +25,10 @@ export default function Home() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: "flex-start",
+    alignItems: "center",
     justifyContent: "flex-start",
-    gap: 60,
-    padding: 40,
-    paddingLeft: 60,
-
-    borderColor: "orange",
-    borderWidth: 4,
+    gap: 55,
+    paddingTop: 30,
   },
   text: {
     color: colors.brown,
