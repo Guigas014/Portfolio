@@ -3,6 +3,7 @@ import { Feather } from "@expo/vector-icons"
 
 import { colors } from "@/styles/Colors"
 import { font } from "@/styles/fontFamily"
+import { Link } from "expo-router"
 
 type HeaderProps = {
   title: string
@@ -16,7 +17,9 @@ export function Header({ title, openDrawer }: HeaderProps) {
         source={require("@/assets/card-icon.png")}
         style={styles.cardImage}
       />
+
       <Text style={styles.title}>{title}</Text>
+
       <TouchableOpacity style={styles.drawer} onPress={openDrawer}>
         <Feather name="menu" size={35} color={colors.white} />
       </TouchableOpacity>

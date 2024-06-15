@@ -5,11 +5,15 @@ import { font } from "@/styles/fontFamily"
 
 type ButtonProps = {
   value: string
+  bgColor: string
 }
 
-export function Button({ value }: ButtonProps) {
+export function Button({ value, bgColor }: ButtonProps) {
   return (
-    <TouchableOpacity style={styles.container} activeOpacity={0.7}>
+    <TouchableOpacity
+      style={[styles.container, { backgroundColor: bgColor }]}
+      activeOpacity={0.7}
+    >
       <Text style={styles.button}>{value}</Text>
     </TouchableOpacity>
   )
@@ -19,10 +23,10 @@ const styles = StyleSheet.create({
   container: {
     alignItems: "center",
     justifyContent: "center",
-    width: 160,
-    height: 45,
+    minWidth: 160,
+    minHeight: 45,
+    padding: 6,
 
-    backgroundColor: colors.asparagus,
     borderRadius: 4,
   },
   button: {

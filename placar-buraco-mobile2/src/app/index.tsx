@@ -1,5 +1,5 @@
 import React from "react"
-import { StyleSheet, Text, View } from "react-native"
+import { StyleSheet, View } from "react-native"
 
 import { colors } from "@/styles/Colors"
 import { font } from "@/styles/fontFamily"
@@ -7,9 +7,9 @@ import { font } from "@/styles/fontFamily"
 import { SectionScores } from "@/components/SectionScores"
 import { ParcialSocres } from "@/components/ParcialScores"
 
-type DrawerProps = {
-  closeDrawer: () => void
-}
+// type DrawerProps = {
+//   closeDrawer: () => void
+// }
 
 export default function Home() {
   return (

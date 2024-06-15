@@ -3,7 +3,6 @@ import { Link } from "expo-router"
 
 import { colors } from "@/styles/Colors"
 import { font } from "@/styles/fontFamily"
-import { useState } from "react"
 
 type DrawerProps = {
   onSelectPage: () => void

@@ -39,7 +39,7 @@ export function ParcialSocres() {
           <ParcialByPlayer playerNum={1} />
           <ParcialByPlayer playerNum={2} />
         </View>
-        <Button value="Pontos" />
+        <Button value="Pontos" bgColor={colors.asparagus} />
       </View>
     </View>
   )
