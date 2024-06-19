@@ -9,7 +9,12 @@ import { ParcialByPlayer } from "./ParcialByPlayer"
 import { Help } from "./Help"
 import { useNavigation } from "expo-router"
 
-export function ParcialScores() {
+type ParcialScoresProps = {
+  nameP1: string
+  nameP2: string
+}
+
+export function ParcialScores({ nameP1, nameP2 }: ParcialScoresProps) {
   const [modalVisible, setModalVisible] = useState(false)
   const navigation = useNavigation()
 
@@ -37,8 +42,8 @@ export function ParcialScores() {
 
       <View style={styles.containerParcials}>
         <View style={styles.headerParcials}>
-          <Text style={styles.namePlayer1}>Guilherme</Text>
-          <Text style={styles.namePlayer2}>Isabel</Text>
+          <Text style={styles.namePlayer1}>{nameP1}</Text>
+          <Text style={styles.namePlayer2}>{nameP2}</Text>
         </View>
 
         <View style={styles.parcials}>
@@ -46,7 +51,7 @@ export function ParcialScores() {
           <ParcialByPlayer playerNum={2} />
         </View>
 
-        <Button value="Pontos" bgColor={colors.asparagus} />
+        <Button value="Pontos" bgColor={colors.asparagus} onClick={() => {}} />
       </View>
     </View>
   )
@@ -100,7 +105,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     width: 300,
-    gap: 40,
+    gap: 50,
   },
   namePlayer1: {
     fontFamily: font.bold,

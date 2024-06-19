@@ -1,16 +1,9 @@
 import React, { useState } from "react"
-import {
-  StyleSheet,
-  Text,
-  View,
-  Image,
-  Switch,
-  TouchableOpacity,
-  ScrollView,
-} from "react-native"
+import { StyleSheet, Text, View, Switch, ScrollView } from "react-native"
 
 import { colors } from "@/styles/Colors"
 import { font } from "@/styles/fontFamily"
+import { useGameData } from "@/Data/gameData"
 
 import { Input } from "@/components/Input"
 import { PlayerLabel } from "@/components/PlayerLabel"
@@ -26,6 +19,8 @@ export default function Update() {
   const [bateIsEnabledP2, setBateIsEnabledP2] = useState(false)
   const [mortoIsEnabledP2, setMortoIsEnabledP2] = useState(false)
 
+  const dataGame = useGameData()
+
   function togglePontosP1() {
     viewPontosP1 == true ? setViewPontosP1(false) : setViewPontosP1(true)
   }
@@ -38,7 +33,7 @@ export default function Update() {
     <ScrollView showsVerticalScrollIndicator={false}>
       <View style={styles.container}>
         <PlayerLabel
-          playerName="Guilherme"
+          playerName={dataGame.namePlayer1}
           playerNum={1}
           textColor={colors.ebony}
           setViewPontos={togglePontosP1}
@@ -111,7 +106,7 @@ export default function Update() {
         </View>
 
         <PlayerLabel
-          playerName="Luisa"
+          playerName={dataGame.namePlayer2}
           playerNum={2}
           textColor={colors.shadow}
           setViewPontos={togglePontosP2}
@@ -184,12 +179,24 @@ export default function Update() {
         </View>
 
         <View style={styles.buttonsContainer}>
-          <Button value="Salvar" bgColor={colors.asparagus} />
+          <Button
+            value="Salvar"
+            bgColor={colors.asparagus}
+            onClick={() => {}}
+          />
 
           <Line />
 
-          <Button value="zerar pontos" bgColor={colors.spanishGray} />
-          <Button value="zerar estatísticas" bgColor={colors.spanishGray} />
+          <Button
+            value="zerar pontos"
+            bgColor={colors.spanishGray}
+            onClick={() => {}}
+          />
+          <Button
+            value="zerar estatísticas"
+            bgColor={colors.spanishGray}
+            onClick={() => {}}
+          />
         </View>
       </View>
     </ScrollView>

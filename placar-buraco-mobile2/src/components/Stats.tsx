@@ -1,11 +1,15 @@
 import { View, Text, StyleSheet } from "react-native"
 
-import { StatsByPlayer } from "./StatsByPlayer"
+import { useGameData } from "@/Data/gameData"
 
 import { font } from "@/styles/fontFamily"
 import { colors } from "@/styles/Colors"
 
+import { StatsByPlayer } from "./StatsByPlayer"
+
 export function Stats() {
+  const dataGame = useGameData()
+
   const typeStats = [
     "pontos:",
     "c. limpa:",
@@ -23,8 +27,8 @@ export function Stats() {
       <View style={styles.table}>
         <View style={styles.header}>
           <Text style={styles.titleHeader}>Rodada</Text>
-          <Text style={styles.titleHeader}>Player 1</Text>
-          <Text style={styles.titleHeader}>Player 2</Text>
+          <Text style={styles.titleHeader}>{dataGame.namePlayer1}</Text>
+          <Text style={styles.titleHeader}>{dataGame.namePlayer2}</Text>
         </View>
         <View style={styles.content}>
           <StatsByPlayer stats={typeStats} />
@@ -60,7 +64,9 @@ const styles = StyleSheet.create({
   header: {
     flexDirection: "row",
     alignItems: "center",
-    justifyContent: "space-between",
+    justifyContent: "center",
+    gap: 20,
+    paddingLeft: 10,
     width: 270,
     height: 40,
 
@@ -68,6 +74,7 @@ const styles = StyleSheet.create({
     borderBottomWidth: 2,
   },
   titleHeader: {
+    width: 80,
     fontFamily: font.medium,
     fontSize: 18,
     color: colors.spanishGray,

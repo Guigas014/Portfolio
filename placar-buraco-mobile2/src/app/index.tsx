@@ -3,6 +3,7 @@ import { StyleSheet, View } from "react-native"
 
 import { colors } from "@/styles/Colors"
 import { font } from "@/styles/fontFamily"
+import { useGameData } from "@/Data/gameData"
 
 import { SectionScores } from "@/components/SectionScores"
 import { ParcialScores } from "@/components/ParcialScores"
@@ -12,12 +13,17 @@ import { ParcialScores } from "@/components/ParcialScores"
 // }
 
 export default function Home() {
+  const dataGame = useGameData()
+
   return (
     <View style={styles.container}>
-      <SectionScores playerNum={1} name="Guilherme" score="2500" />
-      <SectionScores playerNum={2} name="Luisa" score="2100" />
+      <SectionScores playerNum={1} name={dataGame.namePlayer1} score="2500" />
+      <SectionScores playerNum={2} name={dataGame.namePlayer2} score="2100" />
 
-      <ParcialScores />
+      <ParcialScores
+        nameP1={dataGame.namePlayer1}
+        nameP2={dataGame.namePlayer2}
+      />
     </View>
   )
 }

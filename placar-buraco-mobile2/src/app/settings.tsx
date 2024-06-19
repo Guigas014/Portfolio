@@ -1,7 +1,8 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import { ScrollView, StyleSheet, View } from "react-native"
 
 import { colors } from "@/styles/Colors"
+import { useGameData } from "@/Data/gameData"
 
 import { Line } from "@/components/Line"
 import { Button } from "@/components/Button"
@@ -12,6 +13,8 @@ import { Stats } from "@/components/Stats"
 export default function Settings() {
   const [viewPontosP1, setViewPontosP1] = useState(false)
   const [viewPontosP2, setViewPontosP2] = useState(false)
+
+  const dataGame = useGameData()
 
   function togglePontosP1() {
     viewPontosP1 == true ? setViewPontosP1(false) : setViewPontosP1(true)
@@ -38,10 +41,11 @@ export default function Settings() {
         >
           <Input>
             <Input.Field
-              placeholder="Nome do jogador"
+              placeholder={"Nome do jogador"}
               cursorColor={colors.ebony}
               textAlign="left"
-              onChangeText={() => {}}
+              value={dataGame.namePlayer1}
+              onChangeText={dataGame.saveNamesP1}
             />
           </Input>
         </View>
@@ -63,14 +67,19 @@ export default function Settings() {
               placeholder="Nome do jogador"
               cursorColor={colors.ebony}
               textAlign="left"
-              onChangeText={() => {}}
+              value={dataGame.namePlayer2}
+              onChangeText={dataGame.saveNamesP2}
             />
           </Input>
         </View>
 
-        <View style={styles.button}>
-          <Button value="ok" bgColor={colors.asparagus} />
-        </View>
+        {/* <View style={styles.button}>
+          <Button
+            value="ok"
+            bgColor={colors.asparagus}
+            onClick={handleNamePlayer}
+          />
+        </View> */}
 
         <Line />
 

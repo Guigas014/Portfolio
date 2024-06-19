@@ -6,13 +6,15 @@ import { font } from "@/styles/fontFamily"
 type ButtonProps = {
   value: string
   bgColor: string
+  onClick: () => void
 }
 
-export function Button({ value, bgColor }: ButtonProps) {
+export function Button({ value, bgColor, onClick }: ButtonProps) {
   return (
     <TouchableOpacity
       style={[styles.container, { backgroundColor: bgColor }]}
       activeOpacity={0.7}
+      onPress={onClick}
     >
       <Text style={styles.button}>{value}</Text>
     </TouchableOpacity>
