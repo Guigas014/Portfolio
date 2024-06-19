@@ -3,7 +3,6 @@ import { Feather } from "@expo/vector-icons"
 
 import { colors } from "@/styles/Colors"
 import { font } from "@/styles/fontFamily"
-import { Link } from "expo-router"
 
 type HeaderProps = {
   title: string

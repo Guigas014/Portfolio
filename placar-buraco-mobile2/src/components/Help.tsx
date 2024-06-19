@@ -7,7 +7,8 @@ export function Help() {
   return (
     <View style={styles.container}>
       <Text style={styles.text}>p - Pontos</Text>
-      <Text style={styles.text}>c - Canastra</Text>
+      <Text style={styles.text}>cl - Canastra limpa</Text>
+      <Text style={styles.text}>cs - Canastra suja</Text>
       <Text style={styles.text}>b - Bate</Text>
       <Text style={styles.text}>m - Morto</Text>
     </View>
@@ -17,7 +18,7 @@ export function Help() {
 const styles = StyleSheet.create({
   container: {
     margin: 30,
-    marginTop: 600,
+    marginTop: 575,
     backgroundColor: colors.brown,
     borderRadius: 6,
     padding: 20,

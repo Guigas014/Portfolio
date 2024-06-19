@@ -7,9 +7,15 @@ import { font } from "@/styles/fontFamily"
 import { Button } from "./Button"
 import { ParcialByPlayer } from "./ParcialByPlayer"
 import { Help } from "./Help"
+import { useNavigation } from "expo-router"
 
-export function ParcialSocres() {
+export function ParcialScores() {
   const [modalVisible, setModalVisible] = useState(false)
+  const navigation = useNavigation()
+
+  // function updatePage() {
+  //   navigation.goBack()
+  // }
 
   return (
     <View style={styles.container}>
@@ -39,6 +45,7 @@ export function ParcialSocres() {
           <ParcialByPlayer playerNum={1} />
           <ParcialByPlayer playerNum={2} />
         </View>
+
         <Button value="Pontos" bgColor={colors.asparagus} />
       </View>
     </View>
@@ -92,23 +99,17 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
-    width: 280,
-    paddingLeft: 40,
+    width: 300,
+    gap: 40,
   },
   namePlayer1: {
-    width: 140,
-    textAlign: "left",
-
-    fontFamily: font.medium,
+    fontFamily: font.bold,
     fontSize: 22,
     textDecorationLine: "underline",
     color: colors.ebony,
   },
   namePlayer2: {
-    width: 140,
-    textAlign: "left",
-
-    fontFamily: font.medium,
+    fontFamily: font.bold,
     textDecorationLine: "underline",
     fontSize: 22,
     color: colors.shadow,
@@ -116,9 +117,7 @@ const styles = StyleSheet.create({
   parcials: {
     flexDirection: "row",
     alignItems: "flex-start",
-    justifyContent: "flex-start",
-    gap: 70,
-    width: 280,
+    justifyContent: "center",
     minHeight: 235,
     paddingLeft: 30,
   },

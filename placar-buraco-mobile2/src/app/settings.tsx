@@ -1,13 +1,13 @@
 import React, { useState } from "react"
-import { ScrollView, StyleSheet, Text, View } from "react-native"
+import { ScrollView, StyleSheet, View } from "react-native"
 
 import { colors } from "@/styles/Colors"
-import { font } from "@/styles/fontFamily"
 
 import { Line } from "@/components/Line"
 import { Button } from "@/components/Button"
 import { PlayerLabel } from "@/components/PlayerLabel"
 import { Input } from "@/components/Input"
+import { Stats } from "@/components/Stats"
 
 export default function Settings() {
   const [viewPontosP1, setViewPontosP1] = useState(false)
@@ -74,12 +74,7 @@ export default function Settings() {
 
         <Line />
 
-        <View style={styles.counts}>
-          <Text style={styles.labelCount}>Estatísticas</Text>
-          <View style={styles.contentCount}>
-            <Text>Content</Text>
-          </View>
-        </View>
+        <Stats />
       </View>
     </ScrollView>
   )
@@ -102,25 +97,5 @@ const styles = StyleSheet.create({
     width: 300,
     marginTop: 30,
     marginBottom: 40,
-  },
-  counts: {
-    alignItems: "center",
-    width: 300,
-    gap: 12,
-  },
-  labelCount: {
-    fontFamily: font.bold,
-    fontSize: 24,
-    color: colors.spanishGray,
-  },
-  contentCount: {
-    alignItems: "center",
-    justifyContent: "flex-start",
-    width: 300,
-    height: 280,
-
-    borderWidth: 3,
-    borderRadius: 6,
-    borderColor: colors.lavenderGray,
   },
 })

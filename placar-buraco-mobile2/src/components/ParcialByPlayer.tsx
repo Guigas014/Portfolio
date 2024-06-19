@@ -23,9 +23,9 @@ export function ParcialByPlayer({ playerNum }: ParcialByPlayerProps) {
 
 const styles = StyleSheet.create({
   parcial: {
-    alignItems: "flex-start",
+    alignItems: "center",
     justifyContent: "center",
-    //  paddingLeft: 30,
+    width: 150,
   },
   points: {
     textAlign: "center",

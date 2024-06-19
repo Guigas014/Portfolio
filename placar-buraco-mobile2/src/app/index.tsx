@@ -5,7 +5,7 @@ import { colors } from "@/styles/Colors"
 import { font } from "@/styles/fontFamily"
 
 import { SectionScores } from "@/components/SectionScores"
-import { ParcialSocres } from "@/components/ParcialScores"
+import { ParcialScores } from "@/components/ParcialScores"
 
 // type DrawerProps = {
 //   closeDrawer: () => void
@@ -17,7 +17,7 @@ export default function Home() {
       <SectionScores playerNum={1} name="Guilherme" score="2500" />
       <SectionScores playerNum={2} name="Luisa" score="2100" />
 
-      <ParcialSocres />
+      <ParcialScores />
     </View>
   )
 }
