@@ -15,6 +15,8 @@ import { ParcialScores } from "@/components/ParcialScores"
 export default function Home() {
   const dataGame = useGameData()
 
+  // console.log(dataGame.parcialPointsP1, dataGame.parcialPointsP2)
+
   return (
     <View style={styles.container}>
       <SectionScores playerNum={1} name={dataGame.namePlayer1} score="2500" />

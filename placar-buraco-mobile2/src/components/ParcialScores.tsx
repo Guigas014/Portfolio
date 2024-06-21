@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { StyleSheet, Text, View, TouchableOpacity, Modal } from "react-native"
+import { useNavigation } from "expo-router"
 
 import { colors } from "@/styles/Colors"
 import { font } from "@/styles/fontFamily"
@@ -7,7 +8,6 @@ import { font } from "@/styles/fontFamily"
 import { Button } from "./Button"
 import { ParcialByPlayer } from "./ParcialByPlayer"
 import { Help } from "./Help"
-import { useNavigation } from "expo-router"
 
 type ParcialScoresProps = {
   nameP1: string

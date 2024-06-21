@@ -1,5 +1,6 @@
 import React, { useState } from "react"
-import { StyleSheet, Text, View, Switch, ScrollView } from "react-native"
+import { StyleSheet, Text, View, Switch, ScrollView, Alert } from "react-native"
+import { useNavigation } from "expo-router"
 
 import { colors } from "@/styles/Colors"
 import { font } from "@/styles/fontFamily"
@@ -14,12 +15,21 @@ export default function Update() {
   // const [toggleRotationP2, setToggleRotationP2] = useState("0deg")
   const [viewPontosP1, setViewPontosP1] = useState(false)
   const [viewPontosP2, setViewPontosP2] = useState(false)
-  const [bateIsEnabledP1, setBateIsEnabledP1] = useState(false)
+
+  const [pontosP1, setPontosP1] = useState("")
+  const [canastraLimpaP1, setCanastraLimpaP1] = useState("")
+  const [canastraSujaP1, setCanastraSujaP1] = useState("")
   const [mortoIsEnabledP1, setMortoIsEnabledP1] = useState(false)
-  const [bateIsEnabledP2, setBateIsEnabledP2] = useState(false)
+
+  const [pontosP2, setPontosP2] = useState("")
+  const [canastraLimpaP2, setCanastraLimpaP2] = useState("")
+  const [canastraSujaP2, setCanastraSujaP2] = useState("")
   const [mortoIsEnabledP2, setMortoIsEnabledP2] = useState(false)
 
+  const [bateIsTrue, setBateIsTrue] = useState(false)
+
   const dataGame = useGameData()
+  const navigation = useNavigation()
 
   function togglePontosP1() {
     viewPontosP1 == true ? setViewPontosP1(false) : setViewPontosP1(true)
@@ -27,6 +37,56 @@ export default function Update() {
 
   function togglePontosP2() {
     viewPontosP2 == true ? setViewPontosP2(false) : setViewPontosP2(true)
+  }
+
+  function handleAllPPoints() {
+    //Testar o bate e o morto
+    const bateP1 = bateIsTrue == true ? "100 b" : "0 b"
+    const mortoP1 = mortoIsEnabledP1 == true ? "-100 m" : "0 m"
+    const bateP2 = bateIsTrue == false ? "100 b" : "0 b"
+    const mortoP2 = mortoIsEnabledP2 == true ? "-100 m" : "0 m"
+
+    //Altera os pontos com as letras correspondentes
+    const pointsP1 = pontosP1.concat(" p")
+    const canaLimpaP1 = canastraLimpaP1.concat(" cl")
+    const canaSujaP1 = canastraSujaP1.concat(" cs")
+
+    const pointsP2 = pontosP2.concat(" p")
+    const canaLimpaP2 = canastraLimpaP2.concat(" cl")
+    const canaSujaP2 = canastraSujaP2.concat(" cs")
+
+    //Cria o array de saída e atualiza o estado global
+    let pontosTotaisP1 = dataGame.parcialPointsP1
+    let pontosTotaisP2 = dataGame.parcialPointsP2
+    pontosTotaisP1.push(pointsP1, canaLimpaP1, canaSujaP1, bateP1, mortoP1)
+    pontosTotaisP2.push(pointsP2, canaLimpaP2, canaSujaP2, bateP2, mortoP2)
+    console.log(dataGame.parcialPointsP1, dataGame.parcialPointsP2)
+
+    //Mostra uma mensagem de sucesso.
+    Alert.alert("Sucesso", "pontos contados com sucesso!")
+
+    //Voltar para a página principal
+    navigation.goBack()
+  }
+
+  function handleClearData() {
+    Alert.alert("Atenção", "você realmente deseja apagar todos os pontos?", [
+      {
+        text: "Sim",
+        onPress: () => {
+          dataGame.clearAllPoints(), Alert.alert("Sucesso", "Dados apagados!")
+        },
+        style: "default",
+      },
+      {
+        text: "Não",
+        onPress: () => {
+          console.log("Dados não apagados"),
+            Alert.alert("Atençao", "Dados não apagados!")
+        },
+        style: "cancel",
+      },
+    ])
   }
 
   return (
@@ -53,7 +113,8 @@ export default function Update() {
                 cursorColor={colors.ebony}
                 textAlign="right"
                 keyboardType="numeric"
-                onChangeText={() => {}}
+                onChangeText={setPontosP1}
+                value={pontosP1}
               />
             </Input>
           </View>
@@ -66,7 +127,8 @@ export default function Update() {
                 cursorColor={colors.ebony}
                 textAlign="right"
                 keyboardType="numeric"
-                onChangeText={() => {}}
+                onChangeText={setCanastraLimpaP1}
+                value={canastraLimpaP1}
               />
             </Input>
           </View>
@@ -79,7 +141,8 @@ export default function Update() {
                 cursorColor={colors.ebony}
                 textAlign="right"
                 keyboardType="numeric"
-                onChangeText={() => {}}
+                onChangeText={setCanastraSujaP1}
+                value={canastraSujaP1}
               />
             </Input>
           </View>
@@ -88,9 +151,9 @@ export default function Update() {
             <Text style={styles.label}>bate:</Text>
             <Switch
               trackColor={{ false: "#767577", true: colors.spanishGray }}
-              thumbColor={bateIsEnabledP1 ? colors.asparagus : "#f4f3f4"}
-              onValueChange={() => setBateIsEnabledP1(!bateIsEnabledP1)}
-              value={bateIsEnabledP1}
+              thumbColor={bateIsTrue ? colors.asparagus : "#f4f3f4"}
+              onValueChange={() => setBateIsTrue(!bateIsTrue)}
+              value={bateIsTrue}
             />
           </View>
 
@@ -126,7 +189,8 @@ export default function Update() {
                 cursorColor={colors.ebony}
                 textAlign="right"
                 keyboardType="numeric"
-                onChangeText={() => {}}
+                onChangeText={setPontosP2}
+                value={pontosP2}
               />
             </Input>
           </View>
@@ -139,7 +203,8 @@ export default function Update() {
                 cursorColor={colors.ebony}
                 textAlign="right"
                 keyboardType="numeric"
-                onChangeText={() => {}}
+                onChangeText={setCanastraLimpaP2}
+                value={canastraLimpaP2}
               />
             </Input>
           </View>
@@ -152,7 +217,8 @@ export default function Update() {
                 cursorColor={colors.ebony}
                 textAlign="right"
                 keyboardType="numeric"
-                onChangeText={() => {}}
+                onChangeText={setCanastraSujaP2}
+                value={canastraSujaP2}
               />
             </Input>
           </View>
@@ -161,9 +227,9 @@ export default function Update() {
             <Text style={styles.label}>bate:</Text>
             <Switch
               trackColor={{ false: "#767577", true: colors.spanishGray }}
-              thumbColor={bateIsEnabledP2 ? colors.asparagus : "#f4f3f4"}
-              onValueChange={() => setBateIsEnabledP2(!bateIsEnabledP2)}
-              value={bateIsEnabledP2}
+              thumbColor={!bateIsTrue ? colors.asparagus : "#f4f3f4"}
+              onValueChange={() => setBateIsTrue(!bateIsTrue)}
+              value={!bateIsTrue}
             />
           </View>
 
@@ -182,7 +248,7 @@ export default function Update() {
           <Button
             value="Salvar"
             bgColor={colors.asparagus}
-            onClick={() => {}}
+            onClick={handleAllPPoints}
           />
 
           <Line />
@@ -190,7 +256,7 @@ export default function Update() {
           <Button
             value="zerar pontos"
             bgColor={colors.spanishGray}
-            onClick={() => {}}
+            onClick={handleClearData}
           />
           <Button
             value="zerar estatísticas"
