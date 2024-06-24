@@ -44,7 +44,7 @@ export function Stats() {
     handleTotals(dataGame.parcialPointsP1, "cs"),
     handleTotals(dataGame.parcialPointsP1, "b"),
     handleTotals(dataGame.parcialPointsP1, "m"),
-    "?",
+    dataGame.qtdVitoriaP1.toString(),
   ]
 
   const statsP2 = [
@@ -53,7 +53,7 @@ export function Stats() {
     handleTotals(dataGame.parcialPointsP2, "cs"),
     handleTotals(dataGame.parcialPointsP2, "b"),
     handleTotals(dataGame.parcialPointsP2, "m"),
-    "?",
+    dataGame.qtdVitoriaP2.toString(),
   ]
   // const statsP2 = ["11500", "2", "1", "1", "4", "3"]
 

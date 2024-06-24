@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import { Alert, StyleSheet, View } from "react-native"
 
 import { colors } from "@/styles/Colors"
@@ -13,6 +13,9 @@ import { ParcialScores } from "@/components/ParcialScores"
 // }
 
 export default function Home() {
+  const [winnerP1, setWinnerP1] = useState(0)
+  const [winnerP2, setWinnerP2] = useState(0)
+
   const dataGame = useGameData()
 
   const pointsP1 = dataGame.parcialPointsP1
@@ -50,6 +53,9 @@ export default function Home() {
         ? (loseMessage = "O Player 2 tomou um capote!!!")
         : (loseMessage = "O Player 2 jogou bem!!!")
 
+      setWinnerP1(winnerP1 + 1)
+      dataGame.qtdVitoriaP1 = winnerP1
+
       return Alert.alert(`${winMessage}\n\n${loseMessage}`)
     }
 
@@ -61,9 +67,14 @@ export default function Home() {
         ? (loseMessage = "O Player 1 tomou um capote!!!")
         : (loseMessage = "O Player 1 jogou bem!!!")
 
+      setWinnerP2(winnerP2 + 1)
+      dataGame.qtdVitoriaP2 = winnerP2
+
       return Alert.alert(`${winMessage}\n\n${loseMessage}`)
     }
   }
+
+  useEffect(() => Winner(totalP1, totalP2))
 
   return (
     <View style={styles.container}>

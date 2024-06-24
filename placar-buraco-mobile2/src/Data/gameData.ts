@@ -6,6 +6,8 @@ type gameState = {
   namePlayer2: string
   parcialPointsP1: string[]
   parcialPointsP2: string[]
+  qtdVitoriaP1: number
+  qtdVitoriaP2: number
   saveNamesP1: (namePlayer1: string) => void
   saveNamesP2: (namePlayer2: string) => void
   saveParcialPointsP1: (parcialP1: string[]) => void
@@ -18,6 +20,8 @@ export const useGameData = create<gameState>((set) => ({
   namePlayer2: "Player 2",
   parcialPointsP1: [],
   parcialPointsP2: [],
+  qtdVitoriaP1: 0,
+  qtdVitoriaP2: 0,
 
   saveNamesP1: (nameP1: string) => set(() => ({ namePlayer1: nameP1 })),
   saveNamesP2: (nameP2: string) => set(() => ({ namePlayer2: nameP2 })),
