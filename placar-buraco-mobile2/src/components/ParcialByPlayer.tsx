@@ -5,18 +5,20 @@ import { font } from "@/styles/fontFamily"
 
 type ParcialByPlayerProps = {
   playerNum: number
+  points: string[]
 }
 
-export function ParcialByPlayer({ playerNum }: ParcialByPlayerProps) {
+export function ParcialByPlayer({ playerNum, points }: ParcialByPlayerProps) {
   let textColor = ""
   playerNum == 1 ? (textColor = colors.ebony) : (textColor = colors.shadow)
 
   return (
     <View style={styles.parcial}>
-      <Text style={[styles.points, { color: textColor }]}>900 p</Text>
-      <Text style={[styles.points, { color: textColor }]}>800 c</Text>
-      <Text style={[styles.points, { color: textColor }]}>100 b</Text>
-      <Text style={[styles.points, { color: textColor }]}>-100 m</Text>
+      {points.map((point, index) => (
+        <Text key={index} style={[styles.points, { color: textColor }]}>
+          {point}
+        </Text>
+      ))}
     </View>
   )
 }

@@ -1,5 +1,12 @@
 import { useState } from "react"
-import { StyleSheet, Text, View, TouchableOpacity, Modal } from "react-native"
+import {
+  StyleSheet,
+  Text,
+  View,
+  TouchableOpacity,
+  Modal,
+  ScrollView,
+} from "react-native"
 import { useNavigation } from "expo-router"
 
 import { colors } from "@/styles/Colors"
@@ -12,9 +19,16 @@ import { Help } from "./Help"
 type ParcialScoresProps = {
   nameP1: string
   nameP2: string
+  pointsP1: string[]
+  pointsP2: string[]
 }
 
-export function ParcialScores({ nameP1, nameP2 }: ParcialScoresProps) {
+export function ParcialScores({
+  nameP1,
+  nameP2,
+  pointsP1,
+  pointsP2,
+}: ParcialScoresProps) {
   const [modalVisible, setModalVisible] = useState(false)
   const navigation = useNavigation()
 
@@ -46,10 +60,12 @@ export function ParcialScores({ nameP1, nameP2 }: ParcialScoresProps) {
           <Text style={styles.namePlayer2}>{nameP2}</Text>
         </View>
 
-        <View style={styles.parcials}>
-          <ParcialByPlayer playerNum={1} />
-          <ParcialByPlayer playerNum={2} />
-        </View>
+        <ScrollView showsVerticalScrollIndicator={false}>
+          <View style={styles.parcials}>
+            <ParcialByPlayer playerNum={1} points={pointsP1} />
+            <ParcialByPlayer playerNum={2} points={pointsP2} />
+          </View>
+        </ScrollView>
 
         <Button value="Pontos" bgColor={colors.asparagus} onClick={() => {}} />
       </View>
@@ -124,6 +140,6 @@ const styles = StyleSheet.create({
     alignItems: "flex-start",
     justifyContent: "center",
     minHeight: 235,
-    paddingLeft: 30,
+    paddingRight: 40,
   },
 })

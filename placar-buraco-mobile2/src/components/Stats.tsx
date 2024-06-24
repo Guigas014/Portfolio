@@ -18,8 +18,44 @@ export function Stats() {
     "morto:",
     "Vitórias:",
   ]
-  const statsP1 = ["15400", "4", "2", "3", "2", "4"]
-  const statsP2 = ["11500", "2", "1", "1", "4", "3"]
+
+  function handleTotals(pontosByPlayer: string[], valueTest: string) {
+    const totalPontos = pontosByPlayer.filter((ponto) =>
+      ponto.includes(valueTest)
+    )
+
+    const arrayTotal = totalPontos.map((ponto) => {
+      return parseInt(ponto.replace(valueTest, "").trimEnd())
+    })
+
+    const total = arrayTotal.reduce(getSoma, 0)
+
+    // console.log(total)
+    return total.toString()
+  }
+
+  function getSoma(total: number, num: number) {
+    return total + num
+  }
+
+  const statsP1 = [
+    handleTotals(dataGame.parcialPointsP1, "p"),
+    handleTotals(dataGame.parcialPointsP1, "cl"),
+    handleTotals(dataGame.parcialPointsP1, "cs"),
+    handleTotals(dataGame.parcialPointsP1, "b"),
+    handleTotals(dataGame.parcialPointsP1, "m"),
+    "?",
+  ]
+
+  const statsP2 = [
+    handleTotals(dataGame.parcialPointsP2, "p"),
+    handleTotals(dataGame.parcialPointsP2, "cl"),
+    handleTotals(dataGame.parcialPointsP2, "cs"),
+    handleTotals(dataGame.parcialPointsP2, "b"),
+    handleTotals(dataGame.parcialPointsP2, "m"),
+    "?",
+  ]
+  // const statsP2 = ["11500", "2", "1", "1", "4", "3"]
 
   return (
     <View style={styles.container}>

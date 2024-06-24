@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 import { ScrollView, StyleSheet, View } from "react-native"
 
 import { colors } from "@/styles/Colors"
 import { useGameData } from "@/Data/gameData"
 
 import { Line } from "@/components/Line"
-import { Button } from "@/components/Button"
 import { PlayerLabel } from "@/components/PlayerLabel"
 import { Input } from "@/components/Input"
 import { Stats } from "@/components/Stats"
