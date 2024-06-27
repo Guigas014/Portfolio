@@ -13,8 +13,8 @@ import { ParcialScores } from "@/components/ParcialScores"
 // }
 
 export default function Home() {
-  const [winnerP1, setWinnerP1] = useState(0)
-  const [winnerP2, setWinnerP2] = useState(0)
+  let qtdWinnerP1 = 0
+  let qtdWinnerP2 = 0
 
   const dataGame = useGameData()
 
@@ -30,7 +30,7 @@ export default function Home() {
     })
     const totalByPlayer = total.reduce(getSoma, 0)
 
-    console.log(total)
+    // console.log(total)
     return totalByPlayer
   }
 
@@ -46,35 +46,44 @@ export default function Home() {
   //Teste para descobrir o ganhador
   function Winner(scoreP1: number, scoreP2: number) {
     if (scoreP1 >= 3000 && scoreP1 > scoreP2) {
-      const winMessage = "Player 1 ganhou a partida!!!"
+      const winMessage = `${dataGame.namePlayer1} ganhou a partida!!!\n ${totalP1} pontos`
       let loseMessage = ""
 
       scoreP2 <= 1500
-        ? (loseMessage = "O Player 2 tomou um capote!!!")
-        : (loseMessage = "O Player 2 jogou bem!!!")
+        ? (loseMessage = `${dataGame.namePlayer2} tomou um capote!!!\n ${totalP2} pontos`)
+        : (loseMessage = `${dataGame.namePlayer2} jogou bem!!!\n ${totalP2} pontos`)
 
-      setWinnerP1(winnerP1 + 1)
-      dataGame.qtdVitoriaP1 = winnerP1
+      // Conta a quantidade de vitórias
+      qtdWinnerP1 = dataGame.qtdVitoriaP1
+      dataGame.qtdVitoriaP1 = qtdWinnerP1 + 1
 
-      return Alert.alert(`${winMessage}\n\n${loseMessage}`)
+      //Zerar o placar da partida (parcial)
+      dataGame.clearMatchPoints()
+
+      return Alert.alert("Fim da partida!!", `${winMessage}\n\n${loseMessage}`)
     }
-
     if (scoreP2 >= 3000 && scoreP2 > scoreP1) {
-      const winMessage = "Player 1 ganhou a partida!!!"
+      const winMessage = `${dataGame.namePlayer2} ganhou a partida!!!\n ${totalP2} pontos`
       let loseMessage = ""
 
       scoreP2 <= 1500
-        ? (loseMessage = "O Player 1 tomou um capote!!!")
-        : (loseMessage = "O Player 1 jogou bem!!!")
+        ? (loseMessage = `${dataGame.namePlayer1} tomou um capote!!!\n ${totalP1} pontos`)
+        : (loseMessage = `${dataGame.namePlayer1} jogou bem!!!\n ${totalP1} pontos`)
 
-      setWinnerP2(winnerP2 + 1)
-      dataGame.qtdVitoriaP2 = winnerP2
+      // Conta a quantidade de vitórias
+      qtdWinnerP2 = dataGame.qtdVitoriaP2
+      dataGame.qtdVitoriaP2 = qtdWinnerP2 + 1
 
-      return Alert.alert(`${winMessage}\n\n${loseMessage}`)
+      //Zerar o placar da partida (parcial)
+      dataGame.clearMatchPoints()
+
+      return Alert.alert("Fim da partida!!", `${winMessage}\n\n${loseMessage}`)
     }
   }
 
-  useEffect(() => Winner(totalP1, totalP2))
+  useEffect(() => {
+    Winner(totalP1, totalP2)
+  })
 
   return (
     <View style={styles.container}>

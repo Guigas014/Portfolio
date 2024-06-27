@@ -7,18 +7,22 @@ import {
   Inter_500Medium,
   Inter_600SemiBold,
 } from "@expo-google-fonts/inter"
+import { useGameData } from "@/Data/gameData"
 
 import { Loading } from "@/components/Loading"
 import { DrawerContent } from "@/components/DrawerContent"
 import { Header } from "@/components/Header"
 
 export default function Layout() {
-  const drawer = useRef<DrawerLayoutAndroid>(null)
-
   const [title, setTitle] = useState("Canastra")
 
+  const drawer = useRef<DrawerLayoutAndroid>(null)
+  const dataGame = useGameData()
+
   function updateTitle(newTitle: string) {
-    setTitle(newTitle)
+    // setTitle(newTitle)
+    dataGame.changeOldTitle(dataGame.title)
+    dataGame.changeTitle(newTitle)
   }
 
   const [fontsLoaded] = useFonts({
@@ -46,7 +50,10 @@ export default function Layout() {
       drawerPosition="right"
       renderNavigationView={navigationView}
     >
-      <Header title={title} openDrawer={() => drawer.current?.openDrawer()} />
+      <Header
+        title={dataGame.title}
+        openDrawer={() => drawer.current?.openDrawer()}
+      />
       <Slot />
     </DrawerLayoutAndroid>
   )

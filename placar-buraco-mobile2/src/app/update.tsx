@@ -47,46 +47,92 @@ export default function Update() {
     const mortoP2 = mortoIsEnabledP2 == true ? "-100 m" : "0 m"
 
     //Altera os pontos com as letras correspondentes
-    const pointsP1 = pontosP1.concat(" p")
-    const canaLimpaP1 = canastraLimpaP1.concat(" cl")
-    const canaSujaP1 = canastraSujaP1.concat(" cs")
+    const pointsP1 = pontosP1 ? pontosP1.concat(" p") : "0 p"
+    const canaLimpaP1 = canastraLimpaP1 ? canastraLimpaP1.concat(" cl") : "0 cl"
+    const canaSujaP1 = canastraSujaP1 ? canastraSujaP1.concat(" cs") : "0 cs"
 
-    const pointsP2 = pontosP2.concat(" p")
-    const canaLimpaP2 = canastraLimpaP2.concat(" cl")
-    const canaSujaP2 = canastraSujaP2.concat(" cs")
+    const pointsP2 = pontosP2 ? pontosP2.concat(" p") : "0 p"
+    const canaLimpaP2 = canastraLimpaP2 ? canastraLimpaP2.concat(" cl") : "0 cl"
+    const canaSujaP2 = canastraSujaP2 ? canastraSujaP2.concat(" cs") : "0 cs"
 
     //Cria o array de saída e atualiza o estado global
-    let pontosTotaisP1 = dataGame.parcialPointsP1
-    let pontosTotaisP2 = dataGame.parcialPointsP2
-    pontosTotaisP1.push(pointsP1, canaLimpaP1, canaSujaP1, bateP1, mortoP1)
-    pontosTotaisP2.push(pointsP2, canaLimpaP2, canaSujaP2, bateP2, mortoP2)
-    console.log(dataGame.parcialPointsP1, dataGame.parcialPointsP2)
+    let pontosParciaisP1 = dataGame.parcialPointsP1
+    let pontosParciaisP2 = dataGame.parcialPointsP2
+    pontosParciaisP1.push(pointsP1, canaLimpaP1, canaSujaP1, bateP1, mortoP1)
+    pontosParciaisP2.push(pointsP2, canaLimpaP2, canaSujaP2, bateP2, mortoP2)
+
+    //Cria o array da estatística e atualiza o estado global
+    let pontosTotalP1 = dataGame.totalPointsP1
+    let pontosTotalP2 = dataGame.totalPointsP2
+    pontosTotalP1.push(pointsP1, canaLimpaP1, canaSujaP1, bateP1, mortoP1)
+    pontosTotalP2.push(pointsP2, canaLimpaP2, canaSujaP2, bateP2, mortoP2)
+    // pontosParciaisP1.map((ponto) => pontosTotalP1.push(ponto))
+    // pontosParciaisP2.map((ponto) => pontosTotalP2.push(ponto))
+
+    // console.log(dataGame.totalPointsP1, dataGame.totalPointsP2)
+
+    //Atualiza o titulo do HEADER da página
+    const routeID = dataGame.oldTitle
+    routeID == "Canastra"
+      ? dataGame.changeTitle("Canastra")
+      : dataGame.changeTitle("Configurações")
 
     //Mostra uma mensagem de sucesso.
-    Alert.alert("Sucesso", "pontos contados com sucesso!")
+    Alert.alert("Sucesso", "pontos computados com sucesso!")
 
     //Voltar para a página principal
     navigation.goBack()
   }
 
-  function handleClearData() {
-    Alert.alert("Atenção", "você realmente deseja apagar todos os pontos?", [
-      {
-        text: "Sim",
-        onPress: () => {
-          dataGame.clearAllPoints(), Alert.alert("Sucesso", "Dados apagados!")
+  function handleClearParcialData() {
+    Alert.alert(
+      "Atenção",
+      "você realmente deseja apagar os pontos da partida?",
+      [
+        {
+          text: "Sim",
+          onPress: () => {
+            dataGame.clearMatchPoints(),
+              Alert.alert("Sucesso", "Pontos apagados!")
+          },
+          style: "default",
         },
-        style: "default",
-      },
-      {
-        text: "Não",
-        onPress: () => {
-          console.log("Dados não apagados"),
-            Alert.alert("Atençao", "Dados não apagados!")
+        {
+          text: "Não",
+          onPress: () => {
+            console.log("Pontos não apagados"),
+              Alert.alert("Atençao", "Pontos não apagados!")
+          },
+          style: "cancel",
         },
-        style: "cancel",
-      },
-    ])
+      ]
+    )
+  }
+
+  function handleClearTotalData() {
+    Alert.alert(
+      "Atenção",
+      "você realmente deseja apagar os pontos da estatística?",
+      [
+        {
+          text: "Sim",
+          onPress: () => {
+            dataGame.clearAllPoints()
+            dataGame.clearQtdVitorias()
+            Alert.alert("Sucesso", "Pontos da estatística apagados!")
+          },
+          style: "default",
+        },
+        {
+          text: "Não",
+          onPress: () => {
+            console.log("Pontos da estatística não apagados"),
+              Alert.alert("Atençao", "Pontos da estatística não apagados!")
+          },
+          style: "cancel",
+        },
+      ]
+    )
   }
 
   return (
@@ -256,12 +302,12 @@ export default function Update() {
           <Button
             value="zerar pontos"
             bgColor={colors.spanishGray}
-            onClick={handleClearData}
+            onClick={handleClearParcialData}
           />
           <Button
             value="zerar estatísticas"
             bgColor={colors.spanishGray}
-            onClick={() => {}}
+            onClick={handleClearTotalData}
           />
         </View>
       </View>
