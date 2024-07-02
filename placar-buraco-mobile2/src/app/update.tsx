@@ -72,10 +72,19 @@ export default function Update() {
     // console.log(dataGame.totalPointsP1, dataGame.totalPointsP2)
 
     //Atualiza o titulo do HEADER da página
-    const routeID = dataGame.oldTitle
-    routeID == "Canastra"
-      ? dataGame.changeTitle("Canastra")
-      : dataGame.changeTitle("Configurações")
+    const routeID = dataGame.title
+    const oldTitle = dataGame.oldTitle
+
+    if (routeID == "Marcador") {
+      if (oldTitle == "" || oldTitle == "Canastra") {
+        dataGame.changeTitle("Canastra")
+      } else {
+        dataGame.changeTitle("Configurações")
+      }
+    }
+
+    console.log(routeID)
+    console.log(oldTitle)
 
     //Mostra uma mensagem de sucesso.
     Alert.alert("Sucesso", "pontos computados com sucesso!")

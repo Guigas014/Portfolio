@@ -7,7 +7,7 @@ import {
   Modal,
   ScrollView,
 } from "react-native"
-import { useNavigation } from "expo-router"
+import { useNavigation, Link } from "expo-router"
 
 import { colors } from "@/styles/Colors"
 import { font } from "@/styles/fontFamily"
@@ -15,6 +15,7 @@ import { font } from "@/styles/fontFamily"
 import { Button } from "./Button"
 import { ParcialByPlayer } from "./ParcialByPlayer"
 import { Help } from "./Help"
+import { useGameData } from "@/Data/gameData"
 
 type ParcialScoresProps = {
   nameP1: string
@@ -30,11 +31,22 @@ export function ParcialScores({
   pointsP2,
 }: ParcialScoresProps) {
   const [modalVisible, setModalVisible] = useState(false)
-  const navigation = useNavigation()
+  const dataGame = useGameData()
 
-  // function updatePage() {
-  //   navigation.goBack()
-  // }
+  function updatePage() {
+    const routeID = dataGame.title
+
+    if (routeID == "Canastra") {
+      dataGame.changeTitle("Marcador")
+      dataGame.changeOldTitle("Canastra")
+    } else {
+      dataGame.changeTitle("Canastra")
+    }
+
+    // console.log(routeID)
+    // const id = navigation.getId()
+    // navigation.goBack()
+  }
 
   return (
     <View style={styles.container}>
@@ -67,7 +79,9 @@ export function ParcialScores({
           </View>
         </ScrollView>
 
-        <Button value="Pontos" bgColor={colors.asparagus} onClick={() => {}} />
+        <Link style={styles.link} href="update" onPress={updatePage}>
+          Pontos
+        </Link>
       </View>
     </View>
   )
@@ -141,5 +155,21 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     minHeight: 235,
     paddingRight: 40,
+  },
+  link: {
+    alignItems: "center",
+    textAlign: "center",
+    width: 160,
+    height: 45,
+    padding: 6,
+
+    backgroundColor: colors.asparagus,
+    borderRadius: 4,
+
+    fontFamily: font.bold,
+    fontSize: 22,
+    color: colors.white,
+    letterSpacing: 2,
+    textTransform: "uppercase",
   },
 })
