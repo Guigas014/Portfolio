@@ -11,15 +11,14 @@
       "image": "./assets/images/splash.png",
       "resizeMode": "cover"
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
+        "resizeMode": "cover",
         "backgroundColor": "#8AAA79"
       },
       "package": "com.guigas014.placarburacomobile2"
@@ -29,10 +28,7 @@
       "output": "static",
       "favicon": "./assets/images/favicon.png"
     },
-    "plugins": [
-      "expo-router",
-      "expo-font"
-    ],
+    "plugins": ["expo-router", "expo-font"],
     "experiments": {
       "typedRoutes": true
     },
