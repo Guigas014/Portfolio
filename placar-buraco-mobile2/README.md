@@ -19,7 +19,10 @@
 ## Layout
 
 <p align="center">
-  <img alt="Placar Buraco" src="assets/tela-principal.png" width="20%" height="40%">
+  <img alt="Placar Buraco" src="assets/telas/placar buraco 1.jpg" width="20%" height="40%">&nbsp;&nbsp;&nbsp;
+  <img alt="Placar Buraco" src="assets/telas/placar buraco 3.jpg" width="20%" height="40%">&nbsp;&nbsp;&nbsp;
+  <img alt="Placar Buraco" src="assets/telas/placar buraco 4.jpg" width="20%" height="40%">&nbsp;&nbsp;&nbsp;
+  <img alt="Placar Buraco" src="assets/telas/placar buraco 2.jpg" width="20%" height="40%">
 </p>
 
 <br>
