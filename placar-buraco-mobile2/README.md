@@ -3,7 +3,7 @@
 <br>
 
 <p align="center">
-    Placar desenvolvido em React Native, com funcionalidades para marcação dos pontos dos jogos de buraco e estátistica geral.
+    Placar desenvolvido em React Native, com funcionalidades para marcação dos pontos dos jogos de buraco ou canastra e estátistica geral das pontuações.
 </p>
 
 <br>
