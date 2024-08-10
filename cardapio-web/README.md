@@ -30,7 +30,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 O Cardápio Digital é um cardápio que pode ser visualizado por qualquer computador ou 
 dispositivo móvel como smartphones e tablets, através de um link ou até mesmo um QR-Code. 
-Trazendo as informações do cardápio fisíco direto par um meio digital. 
+Trazendo as informações do cardápio fisíco direto para um meio digital. 
 
 
 ## 🔖 Layout
