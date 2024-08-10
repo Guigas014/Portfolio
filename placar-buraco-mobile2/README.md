@@ -39,8 +39,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## Funcionalidades
 
-Na primeira tela é apresentado o placar geral e as parciais dos dois jogadores.<br>
-Tocando e segurando a "interrogação" a direita do texto "Parciais", uma legenda com a descrição das letras que acompanha cada ponto é apresentada.<br>
+Na primeira tela é apresentado o placar geral e as parciais dos dois jogadores. Tocando e segurando a "interrogação" a direita do texto "Parciais", uma legenda com a descrição das letras que acompanha cada ponto é apresentada.<br>
 Para marcar os pontos existem duas opções: o botão "PONTOS" na parte inferior da tela, que leva direto à página de marcação, ou os "três traços" na parte superior esquerda da tela, o qual abre um drawer lateral com um menu de navegação com a opção "marcador".
 <br><br>
 Na tela "Marcador" podemos abrir o formulário de marcação de cada jogador clicando na seta a esquerda dos nomes dos jogadores. Nele podemos anotar os pontos contados de todas as cartas, pontos das canastras limpas e sujas, o bate caso tenha ganhado a partida e o morto caso tenha que pagar o morto. Após anotar toda a pontuação dos dois jogadores basta clicar em "SALVAR". O usuário será redirecionado automaticamente para a primeira tela, com todas as parciais e os totais atualizados.<br>
