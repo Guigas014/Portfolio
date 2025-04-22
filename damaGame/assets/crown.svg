@@ -1,0 +1,8 @@
+<svg width="40" height="40" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+
+      <path 
+            d="M12 2l3 7 5-3-2 8h-12l-2-8 5 3 3-7zm-7.5 12h15v2h-15v-2z" 
+            fill="darkorange" transform="translate(0 2)"
+      />
+
+</svg>
